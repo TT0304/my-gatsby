@@ -1,28 +1,45 @@
-import React, { Component } from "react"
+import React from "react"
 import { graphql } from "gatsby"
-import PropTypes from "prop-types"
+import Layout from "../components/layout"
+import Title from "../components/title"
+import styles from "./post.module.scss"
 
-class Post extends Component {
-  render() {
-    const post = this.props.data.wordpressPost
-    return (
-      <>
-        <h1>{post.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
-      </>
-    )
-  }
+export default ({ data }) => {
+  const post = data.markdownRemark
+  return (
+    <Layout>
+      <div className={styles.container}>
+        <Title text={post.frontmatter.title}></Title>
+        <div
+          style={{
+            width: "100%",
+            height: "200px",
+            backgroundColor: "#fafafa",
+            backgroundImage:
+              "Url(https://source.unsplash.com/960x200/?" +
+              post.frontmatter.category +
+              ")",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            marginBottom: "30px",
+          }}
+        ></div>
+        <div
+          className={styles.content}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+      </div>
+    </Layout>
+  )
 }
-Post.propTypes = {
-  data: PropTypes.object.isRequired,
-  edges: PropTypes.array,
-}
-export default Post
-export const pageQuery = graphql`
-  query($id: String!) {
-    wordpressPost(id: { eq: $id }) {
-      title
-      content
+export const query = graphql`
+  query($slug: String!) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        title
+        category
+      }
     }
   }
 `
