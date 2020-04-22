@@ -6,6 +6,8 @@ import styles from "./post.module.scss"
 
 export default ({ data }) => {
   const post = data.markdownRemark
+  const { markdownRemark, wordpressPost } = data
+  const { featuredImage } = markdownRemark.frontmatter
   return (
     <Layout>
       <div className={styles.container}>
@@ -29,6 +31,16 @@ export default ({ data }) => {
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </div>
+              {featuredImage !== null && (
+                <Img
+                  fluid={featuredImage.childImageSharp.fluid}
+                  className="lg-col-10 md-col-10 sm-col-12 xs-col-12"
+                  style={{
+                    height: "460px",
+                  }}
+                  placeholderStyle={{ paddingBottom: "0" }}
+                />
+              )}
     </Layout>
   )
 }
