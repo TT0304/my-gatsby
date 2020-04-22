@@ -45,13 +45,28 @@ export default ({ data }) => {
   )
 }
 export const query = graphql`
-  query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query($id: String!) {
+    markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
         category
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+              presentationWidth
+            }
+          }
+        }
       }
+    }
+    wordpressPost(id: { eq: $id }) {
+      title
+      featured_media {
+        source_url
+      }
+      content
     }
   }
 `
