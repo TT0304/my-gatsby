@@ -26,10 +26,21 @@ module.exports = {
         path: `${__dirname}/src/markdown`,
       },
     },
-    "gatsby-transformer-remark",
-    "gatsby-plugin-sharp",
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     "gatsby-transformer-sharp",
-    "gatsby-transformer-remark",
   ],
 
   /* Your site config here */
