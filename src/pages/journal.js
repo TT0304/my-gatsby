@@ -3,46 +3,47 @@ import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default ({ data }) => {
-  const { allMarkdownRemark, allWordpressPost } = data
+  const { allMarkdownRemark } = data
   const allPosts = [
-    ...allMarkdownRemark.edges.map(e => e.node),
-    ...allWordpressPost.edges.map(e => e.node),
+    ...allMarkdownRemark.edges.map(e => e.node)
   ]
+  console.log(allPosts);
+  console.log('Fuck you Gatsby');
   return (
     <Layout>
-      {allPosts.map(node => {
-        return (
+      {/* <div>
+        {data.allMarkdownRemark.edges.map(({ node }) => {
           <div key={node.id}>
             <Link
-              to={(() => {
+              to={node.fields.link}
+            >
+              <h3>{node.frontmatter.title}</h3>
+            </Link>
+          </div>
+        })}
+      </div> */}
+      {allPosts.map(node => (
+          <div key={node.id}>
+          <Link
+            to={node.fields.link}
+          >
+            <h1 className="headline">
+              {node.frontmatter.title}
+              {/* {(() => {
                 let result
                 switch (node.internal.type) {
                   case "MarkdownRemark":
-                    result = node.fields.link
+                    result = node.frontmatter.title
                     break
                   case "wordpress__POST":
-                    result = node.fields.link
+                    result = node.title
                 }
                 return result
-              })()}
-            >
-              <h1 className="headline">
-                {(() => {
-                  let result
-                  switch (node.internal.type) {
-                    case "MarkdownRemark":
-                      result = node.frontmatter.title
-                      break
-                    case "wordpress__POST":
-                      result = node.title
-                  }
-                  return result
-                })()}
-              </h1>
-            </Link>
-          </div>
-        )
-      })}
+              })()} */}
+            </h1>
+          </Link>
+        </div>
+      ))}
     </Layout>
   )
 }
@@ -54,32 +55,12 @@ export const pageQuery = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
           }
           fields {
-            slug
             link
           }
           internal {
             type
-          }
-        }
-      }
-    }
-    allWordpressPost(
-      sort: { fields: date, order: DESC }
-      filter: { format: { eq: "standard" } }
-    ) {
-      edges {
-        node {
-          id
-          title
-          date
-          internal {
-            type
-          }
-          fields {
-            link
           }
         }
       }
