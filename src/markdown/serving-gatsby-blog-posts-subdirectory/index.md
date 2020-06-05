@@ -1,7 +1,7 @@
 ---
 title: "How to Serve Gatsby Blog Posts at a Subdirectory"
 date: "2020-04-09"
-category: "cat"
+category: "web development"
 ---
 
 Not all content on your website should be hosted at the root directory. In this tutorial, I'm going to show you how to serve blog posts from a subdirectory in Gatsby website, like `/journal/how-to-build-gatsby-site`.
