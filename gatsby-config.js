@@ -10,15 +10,15 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
-    {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        baseUrl: `ihatewp.local`,
-        protocol: `http`,
-        hostingWPCOM: false,
-        useACF: false,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-wordpress`,
+    //   options: {
+    //     baseUrl: `ihatewp.local`,
+    //     protocol: `http`,
+    //     hostingWPCOM: false,
+    //     useACF: false,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
