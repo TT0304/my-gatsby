@@ -20,14 +20,15 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       value: slug,
     })
     console.log(slug)
-  } else if (node.internal.type === "wordpress__POST") {
-    const slug = node.slug
-    createNodeField({
-      node,
-      name: "link",
-      value: `/journal/${slug}/`,
-    })
   }
+  //  else if (node.internal.type === "wordpress__POST") {
+  //   const slug = node.slug
+  //   createNodeField({
+  //     node,
+  //     name: "link",
+  //     value: `/journal/${slug}/`,
+  //   })
+  // }
 }
 exports.createPages = async ({ graphql, actions }) => {
   // Extract an action called createPage
@@ -36,40 +37,38 @@ exports.createPages = async ({ graphql, actions }) => {
   // query a list of all Markdown slugs in this site
   const result = await graphql(`
     query {
-      allWordpressPost(filter: { format: { eq: "standard" } }) {
-        edges {
-          node {
-            id
-            slug
-            fields {
-              link
-            }
-          }
-        }
-      }
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      allMarkdownRemark {
         edges {
           node {
             id
             fields {
               link
-              slug
             }
           }
         }
       }
     }
   `)
-  const arr = [
-    ...result.data.allMarkdownRemark.edges.map(e => e.node),
-    ...result.data.allWordpressPost.edges.map(e => e.node),
-  ]
-  arr.forEach(el => {
+
+  // const wpTemplate = path.resolve(`./src/templates/wordpress-post.js`)
+  const mdTemplate = path.resolve(`./src/templates/post.js`)
+  // result.data.allWordpressPost.edges.forEach(edge => {
+  //   createPage({
+  //     path: edge.node.fields.link,
+  //     component: slash(wpTemplate),
+  //     context: {
+  //       id: edge.node.id,
+  //     },
+  //   })
+  // })
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: el.fields.link,
-      component: path.resolve("./src/templates/post.js"),
+      path: node.fields.link,
+      component: slash(mdTemplate),
       context: {
-        id: el.id,
+        // Data passed to context is available in page queries
+        // as GraphQL variables.
+        id: node.id,
       },
     })
   })
