@@ -1,0 +1,30 @@
+@import "../styles/global.scss";
+
+@include media("screen", ">bp1Width") {
+  .intro {
+    width: 100%;
+  }
+    h2 {
+      font-size: 2.4rem;
+      line-height: 60px;
+    }
+}
+// @media (min-width: 72rem) {
+//   .intro {
+//     padding-bottom: 2rem;
+//   }
+//     h2 {
+//       width: 100%;
+      
+      
+//     }
+// }
+@media (max-width: 39.99rem) {
+  .intro {
+    font-size: 33px;
+    line-height: 30px;
+  }
+}
+/* @include media(">phone") {
+
+} */
