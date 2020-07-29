@@ -1,23 +1,18 @@
-@import '../styles/global';
-
-$footer-height: 100px;
-
+// @import "../styles/global";
+// @use "../styles/variables" as g;
 .container {
-  background-color: $color-pallete-3;
-  width: $container-width;
-  height: $footer-height;
-  position: absolute;
-  bottom: 0;
-  width: $container-width;
+  display: flex;
+  border-top: 1px dashed burlywood;
+  justify-content: space-between;
+  // background: g.$corporate-blue;
+  width: 1280px;
 
     .footer {
-      margin: 0 auto;
-      max-width: $site-width;
-      height: $footer-height;
-      line-height: $footer-height;
-      color: $color-pallete-4;
+      max-width: 960px;
       font-family: Verdana, Geneva, Tahoma, sans-serif;
-      padding: 0px 20px 0px 20px;
     }
+    // .socialMedia__link {
+    //   background: crimson;
+    // }
 
 }
