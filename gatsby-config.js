@@ -9,7 +9,13 @@ module.exports = {
     title: "Do less, do better, know why",
   },
   plugins: [
-    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        implementation: require("sass"),
+        data: `@use "${__dirname}/src/styles/global" as g;`
+      }
+    },
     // {
     //   resolve: `gatsby-source-wordpress`,
     //   options: {
