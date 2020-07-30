@@ -1,6 +1,8 @@
 @import "../styles/global";
 
 .container {
+  padding-left: 2rem;
+  padding-right: 2rem;
   position: relative;
   min-height: 100vh;
 
@@ -19,4 +21,13 @@
   //   }
 
   // }
+}
+@include media("screen", ">minWidth") {
+  main {
+    padding: 40px;
+  }
+}
+main {
+  max-width: 1160px;
+  margin: 0 auto;
 }
