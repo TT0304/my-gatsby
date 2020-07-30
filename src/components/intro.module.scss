@@ -1,4 +1,4 @@
-@import "../styles/global.scss";
+@import "../styles/global";
 
 @include media("screen", ">bp1Width") {
   .intro {
@@ -25,6 +25,6 @@
     line-height: 30px;
   }
 }
-/* @include media(">phone") {
-
-} */
+// .intro {
+//   border-bottom: 1px dashed g.$gunmetal;
+// }

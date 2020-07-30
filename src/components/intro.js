@@ -3,7 +3,7 @@ import introStyles from "./intro.module.scss"
 
 export default function Intro({children}) {
   return (
-    <div className={introStyles.intro}>
+    <div className={`monospace medium pt3 ${introStyles.intro}`}>
       <h2>{children}</h2>
     </div>
   )
