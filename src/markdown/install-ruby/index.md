@@ -2,7 +2,7 @@
 title: "Install Ruby and Ruby Gems on Mac"
 date: "2020-06-27"
 featuredImage: "red-gemstone.jpg"
-category: "web development"
+category: "programming"
 ---
 
 Running an app in a programming language already installed on a Mac should be easy, right? Since the language has been preinstalled and configured, all you need is to download the app and run.
