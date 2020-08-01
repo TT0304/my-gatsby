@@ -28,9 +28,16 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "files",
+        name: "blogpost",
         path: `${__dirname}/src/markdown`,
       },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'portfolio',
+        path: `${__dirname}/src/portfolio`
+      }
     },
     `gatsby-plugin-sharp`,
     {
