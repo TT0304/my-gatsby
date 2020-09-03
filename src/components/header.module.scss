@@ -1,42 +1,58 @@
 @import '../styles/global';
 
 .container {
-  max-width: $site-width;
   min-height: 140px;
   margin: 0 auto;
   padding-top: 30px;
   margin-top: 50px;
-
   .row {
     text-align: center;
     padding: 5px;
   }
-
-  .button {
-    background-color: $color-pallete-1;
-    display: inline-block;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
-    text-transform: uppercase;
-    color: white;
-    font-weight: bold;
-    height: 30px;
-    min-width: 15px;
-    line-height: 30px;
-    padding-left: 10px;
-    margin-right: 10px;
-    padding-right: 10px;
-    
-    margin-bottom: 10px;
-
-      &:hover {
-        background-color: $color-pallete-2;
-      }
-
+  .tagline {
+    position: relative;
+    text-align: center;
+    // width: 70%;
+    // margin: 0 auto;
   }
+  .shadow {
+    font-size: 5rem;
+    color: $white;
+    text-transform: uppercase;
+    // background-color: $white;
+    letter-spacing: 0.1em;
+    text-shadow: -1px -1px 2px $gunmetal, 
+    3px 3px 2px #343A40;
+    text-align: left;
+    display: inline-block;
+  }
+  .textblock {
+    width: 100%;
+  }
+  // .block {
+  //   display: block;
+  // }
+  // .button {
+  //   background-color: $color-pallete-1;
+  //   font-size: 12px;
+  //   font-weight: bold;
+  //   height: 30px;
+  //   min-width: 15px;
+  //   line-height: 30px;
+  //   padding-left: 10px;
+  //   margin-right: 10px;
+  //   padding-right: 10px;
+    
+  //   margin-bottom: 10px;
+
+  //     &:hover {
+  //       background-color: $color-pallete-2;
+  //     }
+
+  // }
 
   .button-icon {
-    @extend .button;
+    // @extend .button;
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position: center center;

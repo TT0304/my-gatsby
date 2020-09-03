@@ -10,11 +10,22 @@ const HeaderLink = props => (
 )
 
 // HomeButton component
-const HomeButton = props => (
-  <Link to={props.to}>
-    <div className={styles.button}>{props.text}</div>
-  </Link>
-)
+const Tagline = props => {
+  const {text} = props;
+  const words = text.split(',');
+  const divisible = words.length > 1;
+  return (
+    <div className={styles.tagline}>
+    {divisible
+    ? <h1 className={styles.shadow}>
+      {/* {words.map((item, index) => <div className={styles.block} key={index}>{item}</div>)} */}
+      {words.map((item, index) => <>{item}<br /></>)}
+      </h1>
+    : <h1>{props.text}</h1>}
+    </div>
+  );
+  
+}
 
 // SocialButton component
 const SocialButton = props => {
@@ -52,14 +63,14 @@ export default () => (
     `}
     render={data => (
       <header className={styles.container}>
+        <Tagline text={data.site.siteMetadata.title} />
         <div className={styles.row}>
-          <HomeButton to="/" text={data.site.siteMetadata.title} />
           <SocialButton site="github" username="evangeloper"></SocialButton>
           <SocialButton site="linkedin" username="evangeloper"></SocialButton>
           <SocialButton site="twitter" username="evangeloper"></SocialButton>
         </div>
         <div className={styles.row}>
-          <HeaderLink to="/" text="ARTICLES" />
+          <HeaderLink to="/journal" text="JOURNAL" />
           <HeaderLink to="/about" text="ABOUT" />
         </div>
       </header>
