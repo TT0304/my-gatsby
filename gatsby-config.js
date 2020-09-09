@@ -13,7 +13,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         implementation: require("sass"),
-        data: `@use "${__dirname}/src/styles/global" as g;`
+        data: `@use "src/styles/variables" as var;`
       }
     },
     // {

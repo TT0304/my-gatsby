@@ -49,7 +49,7 @@ export default ({ data }) => {
 }
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/src/markdown/"}}, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id

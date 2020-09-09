@@ -1,6 +1,4 @@
-@import "../styles/global";
-
-@include media("screen", ">bp1Width") {
+@include var.media("screen", ">maxWidth") {
   .intro {
     width: 100%;
   }
@@ -19,7 +17,7 @@
       
 //     }
 // }
-@media (max-width: 39.99rem) {
+@include var.media("screen", "<bp1Width") {
   .intro {
     font-size: 33px;
     line-height: 30px;

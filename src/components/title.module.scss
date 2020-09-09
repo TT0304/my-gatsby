@@ -3,10 +3,10 @@
 .container {
   padding-bottom: 10px;
   margin-bottom: 30px;
-  border-bottom: 5px solid $color-pallete-9;
+  border-bottom: 5px solid var.$corporate-blue;
   text-align: center;
   text-transform: uppercase;
-  color: $color-pallete-9;
+  color: var.$darkgrey;
 }
 .subtitle {
   font-size: 18px;

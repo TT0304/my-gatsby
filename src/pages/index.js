@@ -9,7 +9,7 @@ export default () => (
   <Layout>
     {/* <Title text="Welcome" /> */}
     <Intro>
-      Hey there. I am Trang Le, a front-end developer who love to look for ways to make apps faster and more useful.
+      Hey there. I am Trang Le, a front-end developer who's always looking for ways to make apps faster and more useful.
       
     </Intro>
     <section className="hp-secondary">

@@ -15,7 +15,7 @@ const Tagline = props => {
   const words = text.split(',');
   const divisible = words.length > 1;
   return (
-    <div className={styles.tagline}>
+    <div className={styles.tagline} style={{height: '80vh'}}>
     {divisible
     ? <h1 className={styles.shadow}>
       {/* {words.map((item, index) => <div className={styles.block} key={index}>{item}</div>)} */}
@@ -64,6 +64,7 @@ export default () => (
     render={data => (
       <header className={styles.container}>
         <Tagline text={data.site.siteMetadata.title} />
+        <p className={styles.scrollIndicator}>Scroll down and make yourself at home</p>
         <div className={styles.row}>
           <SocialButton site="github" username="evangeloper"></SocialButton>
           <SocialButton site="linkedin" username="evangeloper"></SocialButton>
