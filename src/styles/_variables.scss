@@ -1,9 +1,8 @@
 $white: white;
 $black: black;
+$honeydew: #f1faee;
 $darkgrey: rgb(109, 104, 117);
 $lightgrey: rgb(165, 165, 141);
-$monospace: "Inconsolata", monospace;
-$sans-serif: 'Montserrat', sans-serif;
 $space0: 0;
 $space-half: 0.25rem;
 $space1: 0.5rem;
@@ -12,8 +11,11 @@ $space3: 2rem;
 $space4: 4rem;
 $space5: 8rem;
 $container-width: 1280px;
-$platformFontStack: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+$font-condensed: 'IBM Plex Sans Condensed', sans-serif;
+$font-platform: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
 "Oxygen", "Ubuntu", "Canterell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$font-monospace: "Inconsolata", monospace;
+$font-sans-serif: 'IBM Plex Sans', $font-platform;
 $white: #fff;
 $corporate-blue: #315875;
 $mint: #a3e8d3;
@@ -28,15 +30,23 @@ $width-1: 24rem;
 $width-2: 32rem;
 $width-3: 48rem;
 $width-4: 72rem;
+$width1: 8.33333%;
+$width2: 16.66667%;
 $width3: 25%;
+$width4: 33.33333%;
+$width5: 41.66667%;
+$width6: 50%;
+$width7: 58.33333%;
 $width8: 66.66667%;
+$width9: 75%;
 $width10: 83.33333%;
+$width11: 66.66667%;
 $width12: 100%;
 $serif: "IBM Plex Serif", Georgia, serif;
 
 /* Store breakpoints */
-$mediaMaxWidth: 1260px;
-$mediaBp1Width: 960px;
+$mediaMaxWidth: 72rem;
+$mediaBp1Width: 52rem;
 $mediaMinWidth: 480px;
 
 @function translate-media-condition($c) {

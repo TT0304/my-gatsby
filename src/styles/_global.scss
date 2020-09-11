@@ -4,7 +4,7 @@
   ========================= */
 html,
 body {
-  font-family: var.$platformFontStack;
+  font-family: var.$font-sans-serif;
   margin: 0;
   padding: 0;
   font-size: 19px;
@@ -21,17 +21,23 @@ a {
   text-decoration: none;
 }
 .monospace {
-  font-family: var.$monospace;
+  font-family: var.$font-monospace;
 }
 .sans-serif {
-  font-family: var.$sans-serif;
+  font-family: var.$font-sans-serif;
 }
 /* TYPOGRAPHY
   ----------------------------- */
 .display {
-  font-family: var.$monospace;
+  font-family: var.$font-condensed;
   -webkit-font-smoothing: antialiased;
   font-feature-settings: 'calt' 0;
+}
+h1, h2, h3 {
+  font-family: var.$font-condensed;
+}
+h4, h5, h6 {
+  font-family: var.$font-sans-serif;
 }
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
@@ -40,6 +46,7 @@ h1, h2, h3, h4, h5, h6, p {
 /* ==[ Font Size ]== */
 h1 {
 font-size: 2rem;
+font-weight: 700;
 }
 h2 {
   font-size: 1.5rem;
@@ -285,6 +292,8 @@ margin: var.$space1;
 .pl5 { padding-left: var.$space5; }
 .py5 { padding-top: var.$space5; padding-bottom: var.$space5; }
 .px5 { padding-left: var.$space5; padding-right: var.$space5; }
+.rounded {border-radius: var.$round;}
+.rounded-big {border-radius: var.$round-big}
 .list-style-none { list-style: none; }
 .list-style-inherit { list-style-type: inherit; }
 
@@ -326,6 +335,18 @@ margin: var.$space1;
 .items-center {
   align-items: center;
 }
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
 /* =========================
   TERTIARY LAYOUT
   ========================= */
@@ -334,7 +355,7 @@ margin: var.$space1;
   margin: 60px 0;
   line-height: 15px;
   span {
-    font-family: var.$monospace;
+    font-family: var.$font-monospace;
     font-size: 19px;
     text-transform: uppercase;
     letter-spacing: 0.3rem;
@@ -368,4 +389,81 @@ margin: var.$space1;
   height: 1px;
   border-bottom: 1px dashed var.$lightgrey;
   content: '';
+}
+.col-1 {width: var.$width1;}
+.col-2 {width: var.$width2;}
+.col-3 {width: var.$width3;}
+.col-4 {width: var.$width4;}
+.col-5 {width: var.$width5;}
+.col-6 {width: var.$width6;}
+.col-7 {width: var.$width7;}
+.col-8 {width: var.$width8;}
+.col-9 {width: var.$width9;}
+.col-10 {width: var.$width10;}
+.col-11 {width: var.$width11;}
+.col-12 {width: var.$width12;}
+.width-full {width: 100%;}
+.height-full {height: 100%;}
+@include var.media(">maxWidth") {
+  .lg-col-1 {
+    width: var.$width1;
+  }
+  .lg-col-2 {
+    width: var.$width2;
+  }
+  .lg-col-3 {
+    width: var.$width3;
+  }
+  .lg-col-4 {
+    width: var.$width4;
+  }
+  .lg-col-5 {
+    width: var.$width5;
+  }
+  .lg-col-6 {
+    width: var.$width6;
+  }
+  .lg-col-7 {
+    width: var.$width7;
+  }
+  .lg-col-8 {
+    width: var.$width8;
+  }
+  .lg-col-9 {
+    width: var.$width9;
+  }
+  .lg-col-10 {
+    width: var.$width10;
+  }
+  .lg-col-11 {
+    width: var.$width11;
+  }
+  .lg-col-12 {
+    width: var.$width12;
+  }
+  .lg-mrn1 {
+    margin-right: var.$space1*-1;
+  }
+  .lg-mrn2 {
+    margin-right: var.$space2*-1;
+  }
+  .lg-mrn3 {
+    margin-right: var.$space3*-1;
+  }
+  .lg-mrn4 {
+    margin-right: var.$space4*-1;
+  }
+  .lg-mrn5 {
+    margin-right: var.$space5*-1;
+  }
+}
+@include var.media(">bp1Width", "<maxWidth") {
+  .md-col-1 { width: var.$width1;}
+  .md-col-2 { width: var.$width2;}
+  .md-col-3 { width: var.$width3;}
+  .md-col-4 { width: var.$width4;}
+  .md-col-6 { width: var.$width5;}
+  .md-col-6 { width: var.$width6;}
+  .md-col-7 { width: var.$width7;}
+  .md-col-8 { width: var.$width8;}
 }

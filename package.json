@@ -15,11 +15,16 @@
     "deploy": "gatsby build && surge public/"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.6.16",
+    "@mdx-js/react": "^1.6.16",
     "gatsby": "^2.20.12",
     "gatsby-image": "^2.3.2",
+    "gatsby-plugin-mdx": "^1.2.39",
     "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-sharp": "^2.5.4",
+    "gatsby-remark-copy-linked-files": "^2.3.14",
     "gatsby-remark-images": "^3.2.5",
+    "gatsby-remark-interactive-gifs": "^1.0.3",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-source-wordpress": "^3.2.3",
     "gatsby-transformer-remark": "^2.7.1",
@@ -27,8 +32,8 @@
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "typeface-ibm-plex-mono": "0.0.61",
-    "typeface-ibm-plex-serif": "0.0.75",
+    "typeface-ibm-plex-sans": "0.0.75",
+    "typeface-ibm-plex-sans-condensed": "0.0.61",
     "typeface-inconsolata": "0.0.72",
     "typeface-montserrat": "0.0.75"
   },
