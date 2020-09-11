@@ -50,6 +50,23 @@ module.exports = {
               maxWidth: 1200,
             },
           },
+          {
+            resolve: `gatsby-remark-copy-linked-files`,
+            options: {
+              destinationDir: `${__dirname}/src/gifs`,
+              ignoreFileExtensions: [`png`, `jpq`, `jpeg`]
+            }
+          }
+          // {
+          //   resolve: `gatsby-remark-interactive-gifs`,
+          //   options: {
+          //     root: `${__dirname}`,
+          //     src: `${__dirname}/gifs`,
+          //     dest: `${__dirname}/public/static/gifs`,
+          //     play: `${__dirname}/src/images/play-icon.png`,
+          //     relativePath: `/static/gifs`
+          //   }
+          // }
         ],
       },
     },
