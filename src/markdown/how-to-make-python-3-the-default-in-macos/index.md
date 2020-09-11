@@ -1,7 +1,7 @@
 ---
 title: "How to Make Python 3 the Default in MacOS"
 date: "2020-09-03"
-featuredImage: "python-programming.jpq"
+featuredImage: "python-programming.jpg"
 category: "programming"
 ---
 
@@ -35,7 +35,7 @@ Now, open up your terminal and install Pyenv with homebrew:
 
 Once the installation is completed, go to your home directory and you should see a `.pyenv` folder created fresh off the bat.
 
-![How%20to%20Make%20Python%203%20the%20Default%20in%20MacOS%2049097cc1efbb45a1923ffc4be9b8f003/pyenv-folder-inside-home-directory.png](How%20to%20Make%20Python%203%20the%20Default%20in%20MacOS%2049097cc1efbb45a1923ffc4be9b8f003/pyenv-folder-inside-home-directory.png)
+![pyenv-folder-inside-home-directory](./pyenv-folder-inside-home-directory.png)
 
 ## Initialize pyenv
 
@@ -65,7 +65,7 @@ You could specify the Python version that you want to install like this:
 pyenv install 3.7.3
 ```
 
-![How%20to%20Make%20Python%203%20the%20Default%20in%20MacOS%2049097cc1efbb45a1923ffc4be9b8f003/install-python-3.png](How%20to%20Make%20Python%203%20the%20Default%20in%20MacOS%2049097cc1efbb45a1923ffc4be9b8f003/install-python-3.png)
+![install-python-3](install-python-3.png)
 
 But here's a better way: Use grep command to retrieve the latest stable Python version and tell pyenv to install it.
 
@@ -73,7 +73,7 @@ How can we do that?
 
 If you type `pyenv install --list` into the terminal, you should see a list of Python versions and interpreters available for installing.
 
-![How%20to%20Make%20Python%203%20the%20Default%20in%20MacOS%2049097cc1efbb45a1923ffc4be9b8f003/pyenv-installation-list.gif](How%20to%20Make%20Python%203%20the%20Default%20in%20MacOS%2049097cc1efbb45a1923ffc4be9b8f003/pyenv-installation-list.gif)
+![pyenv installation list](./pyenv-installation-list.gif)
 
 That's one gigantic list. To narrow down to Python versions only, pipe the above command to `grep -v -` and `grep -v b`.
 
@@ -83,7 +83,7 @@ pyenv install --list | grep -v - | grep -v b
 
 The v flag in the `grep` command means inverse search. In a nutshell, we tell the system to search for lines that don't contain the hyphen or the word `b`, short for beta.
 
-![How%20to%20Make%20Python%203%20the%20Default%20in%20MacOS%2049097cc1efbb45a1923ffc4be9b8f003/return-python-versions-only.gif](How%20to%20Make%20Python%203%20the%20Default%20in%20MacOS%2049097cc1efbb45a1923ffc4be9b8f003/return-python-versions-only.gif)
+![return python versions](./return-python-versions-only.gif)
 
 From this list of Python versions, how do we restrict it to the latest version only? Pipe a `tail` command.
 
@@ -95,7 +95,7 @@ The `tail` command prints the last 10 lines of an input by default. `tail -1`ret
 
 Voila
 
-![How%20to%20Make%20Python%203%20the%20Default%20in%20MacOS%2049097cc1efbb45a1923ffc4be9b8f003/return-the-latest-python-release.gif](How%20to%20Make%20Python%203%20the%20Default%20in%20MacOS%2049097cc1efbb45a1923ffc4be9b8f003/return-the-latest-python-release.gif)
+![return the latest python release](./return-the-latest-python-release.gif)
 
 When you read this article, the number will definitely change, but you can use the above command to make sure to always grab the latest version.
 
