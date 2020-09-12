@@ -51,7 +51,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
 
   // const wpTemplate = path.resolve(`./src/templates/wordpress-post.js`)
-  const mdTemplate = path.resolve(`./src/templates/post.js`)
+  const mdTemplate = path.resolve(`./src/templates/post-template.js`)
   // result.data.allWordpressPost.edges.forEach(edge => {
   //   createPage({
   //     path: edge.node.fields.link,
