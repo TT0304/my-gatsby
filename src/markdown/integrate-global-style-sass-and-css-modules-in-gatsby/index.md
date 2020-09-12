@@ -3,6 +3,7 @@ title: "Integrate Sass, Global Style and CSS Modules in Gatsby websites"
 date: "2020-09-09"
 category: "web development"
 featuredImage: "lego-blocks.jpg"
+description: "There's no one-size-fits all approach to styling with CSS, so why don't we combine the best from each approach?"
 
 ---
 Adding global styles to a Gatsby site is a piece of cake.
