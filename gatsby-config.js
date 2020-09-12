@@ -3,10 +3,15 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-
+const siteConfig = require('./config.js');
 module.exports = {
+  pathPrefix: siteConfig.pathPrefix,
   siteMetadata: {
-    title: "Do less, do better, know why",
+    url: siteConfig.url,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    copyright: siteConfig.copyright,
+    author: siteConfig.author
   },
   plugins: [
     {
@@ -16,6 +21,7 @@ module.exports = {
         data: `@use "src/styles/variables" as var;`
       }
     },
+    'gatsby-plugin-react-helmet',
     // {
     //   resolve: `gatsby-source-wordpress`,
     //   options: {
