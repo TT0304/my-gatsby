@@ -31,12 +31,19 @@ module.exports = {
     //     useACF: false,
     //   },
     // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: "blogpost",
+    //     path: `${__dirname}/src/markdown`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "blogpost",
-        path: `${__dirname}/src/markdown`,
-      },
+        name: `mdpost`,
+        path: `${__dirname}/content/markdown`
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',
