@@ -1,24 +1,9 @@
 .container {
-  padding-left: 2rem;
-  padding-right: 2rem;
-  position: relative;
-  min-height: 100vh;
-
-  // .content {
-  //   padding-left: 2rem;
-  //   margin:0 auto;
-  //   max-width: $site-width;
-
-  //   a {
-  //     color: $color-pallete-8;
-  //   }
-
-  //   @media screen and (min-width: 1px) and (max-width: 1000px) {
-  //     padding-left: 20px;
-  //     padding-right: 20px;
-  //   }
-
-  // }
+  background: var.$honeydew;
+  // padding-left: 2rem;
+  // padding-right: 2rem;
+  // position: relative;
+  // min-height: 100vh;
 }
 // @include var.media("screen", ">minWidth") {
 //   main {
