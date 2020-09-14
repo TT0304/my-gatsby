@@ -1,0 +1,57 @@
+@media only screen and (min-width: 72rem) {
+  .articleHero {
+    padding-top: 90px;
+  }
+}
+.articleHero {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 100%;
+  &__container {
+    display: flex;
+    @media only screen and (min-width: 72rem) {
+      align-items: center;
+      flex-direction: row;
+      margin-bottom: 0;
+      transition: margin-bottom .3s ease-out;
+      width: 100%;
+    }
+  }
+  &__media {
+    padding-top: 80px;
+    position: relative;
+  }
+  &__text {
+    position: relative;
+    margin: 30px auto 60px;
+    left: 0;
+    opacity: 1;
+    transition: left .3s ease-out .7s, opacity .3s ease-out .7s;
+    width: 87.5%;
+    @include var.media("screen", ">medWidth") {
+      margin-bottom: 100px;
+      margin-top: 40px;
+      width: 68.75%;
+    }
+    @include var.media("screen", ">maxWidth") {
+      width: 34.375%;
+    }
+  }
+  &__title {
+    margin: 15px 0 0;
+    letter-spacing: -3px;
+    font-size: 70px;
+    @include var.media("screen", ">maxWidth") {
+      font-size: 100px;
+      margin-top: 15px;
+    }
+  }
+  &__date {
+    opacity: 1;
+    transition: opacity .3s ease-out 1s;
+    @media only screen and (min-width: 72rem) {
+      font-size: 20px;
+    }
+  }
+}

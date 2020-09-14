@@ -1,22 +1,20 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from '../components/seo'
+import Post from '../components/Post'
 import { useSiteMetadata } from '../hooks'
-import Title from "../components/title"
-import styles from "./post.module.scss"
 
 export default ({ data }) => {
   const { title: siteTitle, description: siteDescription } = useSiteMetadata();
   const { frontmatter } = data.markdownRemark
-  const { title: postTitle, description: postDescription, featuredImage } = frontmatter
+  const { title: postTitle, description: postDescription } = frontmatter
   const metaDescription = postDescription !== null ? postDescription : siteDescription
   return (
     <Layout>
       <SEO title={`${postTitle} | ${siteTitle}`} description={metaDescription} />
-      <div id="page-content" className={styles.article}>
-      {/* {markdownRemark && ( */}
+      <Post post={data.markdownRemark} />
+      {/* <div id="page-content" className={styles.article}>
         <article className="col-12">
           <div className={styles.articleHero__wrapper}>
             <div className={styles.articleHero__container}>
@@ -41,8 +39,7 @@ export default ({ data }) => {
             dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
           />
         </article>
-      {/* )} */}
-      </div>
+      </div> */}
     </Layout>
   )
 }
@@ -52,6 +49,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date
         category
         description
         featuredImage {
@@ -63,6 +61,7 @@ export const query = graphql`
           }
         }
       }
+      timeToRead
     }
   }
 `

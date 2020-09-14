@@ -46,8 +46,8 @@ $serif: "IBM Plex Serif", Georgia, serif;
 
 /* Store breakpoints */
 $mediaMaxWidth: 72rem;
-$mediaBp1Width: 52rem;
-$mediaMinWidth: 480px;
+$mediaMedWidth: 52rem;
+$mediaSmWidth: 36rem;
 
 @function translate-media-condition($c) {
   $condMap: (
@@ -56,10 +56,10 @@ $mediaMinWidth: 480px;
 		"retina": "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
      ">maxWidth": "(min-width: #{$mediaMaxWidth + 1})",
 		"<maxWidth": "(max-width: #{$mediaMaxWidth})", 		
-		">bp1Width": "(min-width: #{$mediaBp1Width + 1})",
-		"<bp1Width": "(max-width: #{$mediaBp1Width})",
-		">minWidth": "(min-width: #{$mediaMinWidth + 1})",
-		"<minWidth": "(max-width: #{$mediaMinWidth})"
+		">medWidth": "(min-width: #{$mediaMedWidth + 1})",
+		"<medWidth": "(max-width: #{$mediaMedWidth})",
+		">smWidth": "(min-width: #{$mediaSmWidth + 1})",
+		"<smWidth": "(max-width: #{$mediaSmWidth})"
 	);
   @return map-get( $condMap, $c );
 }
