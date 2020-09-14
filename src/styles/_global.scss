@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6{
   margin: 0;
   font-weight: normal;
 }
-p {
+dl, ol, p, ul {
   margin: 10px 0 0;
 }
 /* ==[ Font Size ]== */
@@ -461,6 +461,11 @@ margin: var.$space1;
   }
   .lg-mrn5 {
     margin-right: var.$space5*-1;
+  }
+}
+@include var.media(">medWidth") {
+  dl, ol, p, ul {
+    margin-top: 15px;
   }
 }
 @include var.media(">medWidth", "<maxWidth") {
