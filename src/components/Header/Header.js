@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
-import styles from "./header.module.scss"
+import styles from "./Header.module.scss"
 
 // HeaderLink component
 const HeaderLink = props => (
@@ -24,9 +24,7 @@ const Tagline = props => {
     : <h1>{props.text}</h1>}
     </div>
   );
-  
 }
-
 // SocialButton component
 const SocialButton = props => {
   let style = ""
@@ -49,32 +47,42 @@ const SocialButton = props => {
     </a>
   )
 }
-
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `}
-    render={data => (
-      <header className={styles.container}>
-        <Tagline text={data.site.siteMetadata.title} />
-        <p className={styles.scrollIndicator}>Scroll down and make yourself at home</p>
-        <div className={styles.row}>
-          <SocialButton site="github" username="evangeloper"></SocialButton>
-          <SocialButton site="linkedin" username="evangeloper"></SocialButton>
-          <SocialButton site="twitter" username="evangeloper"></SocialButton>
-        </div>
-        <div className={styles.row}>
-          <HeaderLink to="/journal" text="JOURNAL" />
-          <HeaderLink to="/about" text="ABOUT" />
-        </div>
-      </header>
-    )}
-  />
-)
+export default function Header() {
+  return (
+    <header role="banner">
+      <div className={styles.header__right}>
+        <nav className={styles.nav}>
+          <ul className={`${styles.nav__list} flex relative list-style-none`}>
+            <li className={styles.link}>
+              <div className={`${styles.link__wrapper} relative`}>
+                <Link className={`${styles.link__anchor} uppercase`} to="/journal">Insight</Link>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  )
+}
+// export default () => (
+//   <StaticQuery
+//     query={graphql`
+//       query {
+//         site {
+//           siteMetadata {
+//             title
+//           }
+//         }
+//       }
+//     `}
+//     render={data => (
+//       <header className={styles.container}>
+//         <Tagline text={data.site.siteMetadata.title} />
+//         <div className={styles.row}>
+//           <HeaderLink to="/journal" text="JOURNAL" />
+//           <HeaderLink to="/about" text="ABOUT" />
+//         </div>
+//       </header>
+//     )}
+//   />
+// )

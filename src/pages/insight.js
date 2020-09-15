@@ -27,7 +27,7 @@ export default ({ data }) => {
           <Link
             to={node.fields.link}
           >
-            <h1 className="headline">
+            <h1 className="headline sans-serif">
               {node.frontmatter.title}
               {/* {(() => {
                 let result
@@ -49,7 +49,7 @@ export default ({ data }) => {
 }
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/src/markdown/"}}, sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/content/"}}, sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id

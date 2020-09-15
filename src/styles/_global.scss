@@ -2,7 +2,11 @@
 /* =========================
   GLOBAL SETTINGS 
   ========================= */
-html,
+.max-width-1 { max-width: var.$width-1;}
+.max-width-2 { max-width: var.$width-2;}
+.max-width-3 { max-width: var.$width-3;}
+.max-width-4 { max-width: var.$width-4;}
+  html,
 body {
   font-family: var.$font-sans-serif;
   margin: 0;
@@ -99,6 +103,7 @@ h5.big, .big h5 {
 .regular {
   font-weight: normal;
 }
+.uppercase { text-transform: uppercase; }
 /* ==[ Text Align ]== */
 .center {
   text-align: center;
@@ -247,6 +252,10 @@ margin: var.$space1;
     margin-left: auto;
     margin-right: auto;
   }
+.relative { position: relative }
+.absolute { position: absolute }
+.fixed { position: fixed }
+.static { position: static }
 /* Padding
 ========================================================================== */
 .p0 { padding: var.$space0; }
@@ -332,6 +341,7 @@ margin: var.$space1;
 .flex {
   display: flex;
 }
+.flex-column { flex-direction: column;}
 .flex-reverse {
   flex-direction: row-reverse;
 }
