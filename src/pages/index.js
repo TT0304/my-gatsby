@@ -1,13 +1,15 @@
 import React from "react"
 import Layout from "../components/layout"
+import Header from '../components/Header'
 import Intro from "../components/intro"
 import ArticleList from "../components/article-list-homepage"
 import Portfolio from "../components/portfolio-select"
 
 export default () => (
-  <Layout>
+  <Layout width="max">
+    <Header />
     <Intro>
-      Hey there. I am Trang Le, a front-end developer who's always looking for ways to make apps faster and more useful.
+      Hey there. I am Trang Le, a front-end developer. I work with result-driven folks who are sick of shiny websites which no one returns to.
       
     </Intro>
     <section className="hp-secondary">

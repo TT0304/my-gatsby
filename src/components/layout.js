@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./layout.module.scss"
-import Header from "./header.js"
+import Header from "./Header/Header.js"
 import Footer from "./footer.js"
 
 // export default ({ children }) => (
@@ -12,10 +12,13 @@ import Footer from "./footer.js"
 //   </Footer>
 //   </div>
 // )
-export default function Layout ({ children }) {
+export default function Layout ({ children, width }) {
+  const classname = width === "max" ? "max-width-4 mx-auto" : "";
   return (
-    <main id="main" className={styles.layout} role="main">
-      {children}
-    </main>
+    <div id="main" className={styles.container} role="main">
+      <div className={classname}>
+        {children}
+      </div>
+    </div>
   )
 }

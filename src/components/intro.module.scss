@@ -17,7 +17,7 @@
       
 //     }
 // }
-@include var.media("screen", "<bp1Width") {
+@include var.media("screen", "<medWidth") {
   .intro {
     font-size: 33px;
     line-height: 30px;
