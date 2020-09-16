@@ -6,7 +6,7 @@
 .max-width-2 { max-width: var.$width-2;}
 .max-width-3 { max-width: var.$width-3;}
 .max-width-4 { max-width: var.$width-4;}
-  html,
+html,
 body {
   font-family: var.$font-sans-serif;
   margin: 0;
@@ -85,6 +85,7 @@ h4.big, .big h4 {
 h5.big, .big h5 {
   font-size: 0.9rem;
 }
+.huge { font-size: 1rem;}
 .normal {
   font-size: 0.8rem;
 }
@@ -130,11 +131,16 @@ h5.big, .big h5 {
 .line-height-6 {
   line-height: 1.8;
 }
+/* COLOR
+  ----------------------------- */
+.honeydew { background-color: var.$honeydew;}
 /* Margin
 ========================================================================== */
 .mb-half {
   margin-bottom: var.$space-half;
 }
+.mo { margin: var.$space0; }
+.mt0 { margin-top: var.$space0; }
 .m1 {
 margin: var.$space1;
 }
@@ -335,7 +341,9 @@ margin: var.$space1;
   border-style: solid;
   border-width: 3px;
 }
-
+.block { display: block; }
+.inline { display: inline; }
+.inline-block { display: inline-block; }
 /* Flexbox
 ========================================================================== */
 .flex {
@@ -378,7 +386,6 @@ margin: var.$space1;
     height: 15px;
     border-right: 1px solid var.$darkgrey;
     border-left: 1px solid var.$darkgrey;
-    background: var.$white;
     vertical-align: top;
     line-height: 15px;
   }
@@ -388,7 +395,6 @@ margin: var.$space1;
   top: 5px;
   right: 0;
   left: 0;
-  z-index: -1;
   height: 2px;
   background: var.$black;
   content: '';

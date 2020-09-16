@@ -49,7 +49,7 @@ const SocialButton = props => {
 }
 export default function Header() {
   return (
-    <header role="banner">
+    <header className='monospace' role="banner">
       <div className={styles.header__right}>
         <nav className={styles.nav}>
           <ul className={`${styles.nav__list} flex relative list-style-none`}>

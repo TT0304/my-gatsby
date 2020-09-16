@@ -7,9 +7,9 @@ export default function Post({post}) {
   const { html, timeToRead } = post;
   const {title, date, featuredImage} = post.frontmatter;
   return (
-    <div className={styles.post}>
+    <article className={styles.post}>
       <Hero title={title} image={featuredImage} date={date} />
       <Body body={html} readingTime={timeToRead} />
-    </div>
+    </article>
   )
 }

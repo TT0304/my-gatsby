@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import SEO from '../components/seo'
 import Post from '../components/Post'
 import { useSiteMetadata } from '../hooks'
@@ -11,7 +11,7 @@ export default ({ data }) => {
   const { title: postTitle, description: postDescription } = frontmatter
   const metaDescription = postDescription !== null ? postDescription : siteDescription
   return (
-    <Layout>
+    <Layout pageType="post">
       <SEO title={`${postTitle} | ${siteTitle}`} description={metaDescription} />
       <Post post={data.markdownRemark} />
       {/* <div id="page-content" className={styles.article}>

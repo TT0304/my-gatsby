@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./404.module.scss"
-import Layout from "../components/layout"
+import Layout from "../components/Layout"
 import { Link } from "gatsby"
 
 export default () => (
