@@ -57,10 +57,7 @@ export const pageQuery = graphql`
             title
           }
           fields {
-            link
-          }
-          internal {
-            type
+            slug
           }
         }
       }

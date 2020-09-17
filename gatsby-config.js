@@ -42,7 +42,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `mdpost`,
-        path: `${__dirname}/content/markdown`
+        path: `${__dirname}/content`
       }
     },
     {
