@@ -3,6 +3,7 @@ title: "How to Make Python 3 the Default in MacOS"
 date: "2020-09-03"
 featuredImage: "python-programming.jpg"
 category: "programming"
+description: "Learn how to set up Python 3 as the default on your Mac so you can make the most of it in the shortest time."
 ---
 
 There are certain processes I've been doing that I know are inefficient, but I stick with it out of laziness. 

@@ -9,6 +9,7 @@ module.exports = {
   siteMetadata: {
     url: siteConfig.url,
     title: siteConfig.title,
+    blogTitle: siteConfig.blogTitle,
     description: siteConfig.description,
     copyright: siteConfig.copyright,
     author: siteConfig.author
@@ -22,6 +23,12 @@ module.exports = {
       }
     },
     'gatsby-plugin-react-helmet',
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://bytrangle.surge.sh`
+      }
+    },
     // {
     //   resolve: `gatsby-source-wordpress`,
     //   options: {

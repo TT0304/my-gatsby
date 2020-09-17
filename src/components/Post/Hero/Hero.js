@@ -22,7 +22,7 @@ export default function Hero({ title, image, date }) {
         </div>
         <div className={styles.articleHero__text}>
           <h1 className={`${styles.articleHero__title} huge display line-height-1 strong`}>{title}</h1>
-          <p className={`${styles.articleHero__date} line-height-5 medium mt1`}>{`Published on ${date}`}</p>
+          <p className={`${styles.articleHero__date} line-height-5 medium`}>{`Published on ${date}`}</p>
         </div>
       </div>
     </div>

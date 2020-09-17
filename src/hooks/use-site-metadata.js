@@ -15,6 +15,7 @@ const useSiteMetadata = () => {
             }
             url
             title
+            blogTitle
             description
             copyright
           }

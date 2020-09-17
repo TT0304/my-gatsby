@@ -3,23 +3,9 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useSiteMetadata } from '../hooks'
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, socialImg }) {
   const { author, url } = useSiteMetadata();
-  // const { site } = useStaticQuery(
-  //   graphql`
-  //     query {
-  //       site {
-  //         siteMetadata {
-  //           title
-  //           description
-  //           author {
-  //             name
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `
-  // )
+  const imgUrl = `${url}${socialImg}`
   return (
     <Helmet
       htmlAttributes={{
@@ -41,6 +27,10 @@ function SEO({ description, lang, meta, title }) {
           content: description
         },
         {
+          property: `og:image`,
+          content: imgUrl
+        },
+        {
           property: `og:type`,
           content: `website`
         },
@@ -59,6 +49,9 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: description
+        },
+        {name: `twitter:image`,
+        content: imgUrl
         }
       ].concat(meta)}
     />

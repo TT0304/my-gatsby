@@ -1,14 +1,11 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 import Intro from "../components/intro"
 import ArticleList from "../components/article-list-homepage"
 import Portfolio from "../components/portfolio-select"
 
 export default () => (
   <Layout width="max" pageType="page">
-    <Header />
     <Intro>
       Hey there. I am Trang Le, a front-end developer. I work with result-driven folks who are sick of shiny websites which no one returns to.
       
@@ -25,6 +22,5 @@ export default () => (
       </h2>
       <ArticleList />
     </section>
-    <Footer />
   </Layout>
 )

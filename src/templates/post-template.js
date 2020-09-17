@@ -1,18 +1,21 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import SEO from '../components/seo'
 import Post from '../components/Post'
 import { useSiteMetadata } from '../hooks'
 
 export default ({ data }) => {
-  const { title: siteTitle, description: siteDescription } = useSiteMetadata();
+  const { blogTitle, description: siteDescription } = useSiteMetadata();
   const { frontmatter } = data.markdownRemark
-  const { title: postTitle, description: postDescription } = frontmatter
-  const metaDescription = postDescription !== null ? postDescription : siteDescription
+  const { title: postTitle, description: postDescription, featuredImage } = frontmatter
+  const metaDescription = postDescription !== null ? postDescription : siteDescription;
+  const socialImg = featuredImage !== null ? featuredImage['publicURL'] : undefined;
   return (
-    <Layout pageType="post">
-      <SEO title={`${postTitle} | ${siteTitle}`} description={metaDescription} />
+    <Layout
+      pageType="post"
+      title={`${postTitle} | ${blogTitle}`}
+      description={metaDescription}
+      socialImg={socialImg}>
       <Post post={data.markdownRemark} />
       {/* <div id="page-content" className={styles.article}>
         <article className="col-12">
@@ -59,6 +62,7 @@ export const query = graphql`
               presentationWidth
             }
           }
+          publicURL
         }
       }
       timeToRead
