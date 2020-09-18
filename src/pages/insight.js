@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
+import styles from './insight.module.scss'
 
 export default ({ data }) => {
   const { allMarkdownRemark } = data
@@ -22,10 +23,11 @@ export default ({ data }) => {
           </div>
         })}
       </div> */}
+      <div className={`${styles.articleList} pb4`}>
       {allPosts.map(node => (
           <div key={node.id}>
           <Link
-            to={node.fields.link}
+            to={node.fields.slug}
           >
             <h1 className="headline sans-serif">
               {node.frontmatter.title}
@@ -44,6 +46,7 @@ export default ({ data }) => {
           </Link>
         </div>
       ))}
+      </div>
     </Layout>
   )
 }

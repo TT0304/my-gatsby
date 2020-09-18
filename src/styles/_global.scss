@@ -2,6 +2,17 @@
 /* =========================
   GLOBAL SETTINGS 
   ========================= */
+#__loader {
+  background-color: var.$black-olive;
+  svg {
+    width: 4rem;
+    height: auto;
+    rect {
+      fill: var.$mint;
+    }
+  }
+}
+
 .max-width-1 { max-width: var.$width-1;}
 .max-width-2 { max-width: var.$width-2;}
 .max-width-3 { max-width: var.$width-3;}
@@ -134,7 +145,9 @@ h5.big, .big h5 {
 }
 /* COLOR
   ----------------------------- */
+.white { background-color: var.$white;}
 .honeydew { background-color: var.$honeydew;}
+.offblack { background-color: var.$black-olive; }
 /* Margin
 ========================================================================== */
 .mb-half {
@@ -259,10 +272,22 @@ margin: var.$space1;
     margin-left: auto;
     margin-right: auto;
   }
+/* Position
+========================================================================== */
 .relative { position: relative }
 .absolute { position: absolute }
 .fixed { position: fixed }
 .static { position: static }
+.top-0 { top: 0; }
+.bottom-0 { bottom: 0; }
+.right-0 { right: 0; }
+.left-0 { left: 0; }
+.all-0 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 /* Padding
 ========================================================================== */
 .p0 { padding: var.$space0; }
@@ -386,8 +411,8 @@ margin: var.$space1;
     background: var.$honeydew;
     padding: 0 27px;
     height: 15px;
-    border-right: 1px solid var.$darkgrey;
-    border-left: 1px solid var.$darkgrey;
+    border-right: 1px solid var.$black-olive;
+    border-left: 1px solid var.$black-olive;
     vertical-align: top;
     line-height: 15px;
   }

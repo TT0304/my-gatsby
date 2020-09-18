@@ -1,7 +1,7 @@
 import React from "react"
 import {StaticQuery, graphql} from "gatsby"
 import Img from "gatsby-image"
-import styles from "./portfolio-select.module.css"
+import styles from "./portfolio-select.module.scss"
 
 export default () => (
   <StaticQuery 
