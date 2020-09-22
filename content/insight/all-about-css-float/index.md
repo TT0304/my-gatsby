@@ -1,7 +1,9 @@
 ---
 title: All about CSS float property
 date: "2020-01-20"
+featuredImage: "paper-boat.jpg"
 category: "web design"
+description: "Even with the rise of flex box and grid, the CSS float property is not going away anytime soon if used correctly. Learn how to make the best of it to create stunning layout."
 ---
 
 Why am I even writing about `float` property in 2020 when there are newer, cooler techniques for laying out web pages?

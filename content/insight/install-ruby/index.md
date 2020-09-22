@@ -3,6 +3,7 @@ title: "Install Ruby and Ruby Gems on Mac"
 date: "2020-06-27"
 featuredImage: "red-gemstone.jpg"
 category: "programming"
+description: "Installation is usually the easiest step in mastering that language. However, some approach to installation is more effective than others. Learn the best way to install Ruby so you can get up and running with it in the shortest time possible."
 ---
 
 Running an app in a programming language already installed on a Mac should be easy, right? Since the language has been preinstalled and configured, all you need is to download the app and run.

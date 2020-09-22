@@ -2,11 +2,17 @@
 title: "How to Serve Gatsby Blog Posts at a Subdirectory"
 date: "2020-04-09"
 category: "web development"
+featuredImage: "abstract-light-background.jpg"
+description: "Learn how to programmatically serve Gatsby blog posts at a subdirectory so that whenever you want to change the subdirectory name, you only need to change it once."
 ---
 
-Not all content on your website should be hosted at the root directory. In this tutorial, I'm going to show you how to serve blog posts from a subdirectory in Gatsby website, like `/journal/how-to-build-gatsby-site`.
+Not all content on your website should be served at the root directory. Many websites serve them at a subdirectory, like `/journal`, `/insight`, `/blog` etc. 
 
-Let's get started.
+This is purely a matter of preference, but I think it helps a bit with user experience. When a user sees a blog post with a url ending in `/journal/how-to-build-gatsby-site`, it signifies to them that the web page at `/journal` will contain a list of all your blog posts to date. 
+
+Please note that the url above is just a slug, i.e. a human-friendly link. All of your content is still hosted at the root directory. If you want to host your site at a path other than the root directory, similar to a Github page at `example.github.io/gatsby`, you will need to configure `path-prefix` in the Gatsby config file.
+
+Without further ado, let's get started.
 
 The process is quite similar to my previous tutorial for creating pages programmatically in Gatsby, but we'll need to do some extra work.
 

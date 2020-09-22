@@ -1,8 +1,10 @@
 ---
 title: "How to Create Pages Programmatically in Gatsby"
 date: "2020-04-08"
+featuredImage: "plan.jpg"
 tags: ["gatsby.js", "graphql"]
 category: "web development"
+description: "Blog posts usually follow the same format. Learn how to create them from a template programmatically so that you only have to do it once and enjoy the fruit of your coding"
 ---
 
 When you start building a Gatsby website, you probably drop all your posts inside the `pages` folder. Since Gatsby is a static site generator, it automatically turns those component into a full blown web page.

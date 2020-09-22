@@ -1,8 +1,8 @@
 ---
 title: "How to Fetch Content from Wordpress to Gatsby"
 date: "2020-04-07"
-image: "https://source.unsplash.com/150x150/?gatsbyjs"
-category: "nature"
+featuredImage: "ripple.jpg"
+category: "web development"
 ---
 
 So you've made the decision to migrate from Wordpress to Gatsby. One big requestion is looming: How do you fetch content from Wordpress safely?

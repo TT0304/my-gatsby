@@ -3,9 +3,10 @@ title: "How to Render Images in Markdown Files to Gatsby Pages"
 date: "2020-04-13"
 featuredImage: "picture-frame.png"
 category: "web development"
+description: "Long lives Markdown. Learn how to render images from a Markdown file into a responsive HTML page on Gatsby."
 ---
 
-The first time that I tried to output Markdown files to my Gatsby web pages, I was very surprised to see none of the images disappear. That's because the Markdown format doesn't come with image display out of the box. Rendering images in Markdown files to Gatsby pages is not obvious, but I'm going to show you how to do that in a few simple steps.
+The first time that I tried to output Markdown files to my Gatsby web pages, I was very surprised to see none of the images disappear. That's because the Markdown format doesn't come with image display out of the box. Rendering images in Markdown files to Gatsby pages is not obvious, so I'm going to help you navigate that in a few simple steps.
 
 Part of what makes Wordpress so popular it makes inlining images blog posts so easy. If you have been around the internet since early 2000s as I was, you've probably come across blog posts with broken image links. This is often due to one of these two reasons:
 

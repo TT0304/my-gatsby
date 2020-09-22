@@ -1,8 +1,10 @@
 ---
 title: "How to Render Blog Posts from Multiple Sources in Gatsby"
 date: "2020-04-10"
+featuredImage: "drawer.jpg"
 category: "web development"
 tags: ["gatsby.js", "graphql"]
+description: "Gatsby prides itself in its ability to source data from anywhere, e.g. your file system, your sluggish Wordpress website, an old sql database, a headless CMS etc. But how do you merge them into one component? Learn how to do that in this hands-on tutorial."
 ---
 
 It is a lot of work to create pages for your blog post, but what if your content come from various places, like Wordpress, Contentful, Markdown, Mdx? In this tutorial, I'm going to show you how to render blog posts from multiple sources, using only one template.
