@@ -13,10 +13,10 @@
   }
 }
 
-.max-width-1 { max-width: var.$width-1;}
-.max-width-2 { max-width: var.$width-2;}
-.max-width-3 { max-width: var.$width-3;}
-.max-width-4 { max-width: var.$width-4;}
+.max-width-1 { max-width: var.$width9;}
+.max-width-2 { max-width: var.$width10;}
+.max-width-3 { max-width: var.$width11;}
+.max-width-4 { max-width: var.$width12;}
 html,
 body {
   font-family: var.$font-sans-serif;
@@ -336,8 +336,7 @@ margin: var.$space1;
 .pl5 { padding-left: var.$space5; }
 .py5 { padding-top: var.$space5; padding-bottom: var.$space5; }
 .px5 { padding-left: var.$space5; padding-right: var.$space5; }
-.rounded {border-radius: var.$round;}
-.rounded-big {border-radius: var.$round-big}
+
 .list-style-none { list-style: none; }
 .list-style-inherit { list-style-type: inherit; }
 
@@ -356,17 +355,30 @@ margin: var.$space1;
 }
 /* ==[ Border ]== */
 .border {
-  border-style: solid;
   border-width: 1px;
 }
 .border-thickish {
-  border-style: solid;
   border-width: 2px;
 }
 .border-thick {
-  border-style: solid;
   border-width: 3px;
 }
+.border-top {
+  border-top-style: var.$border-style;
+  border-top-width: 1px;
+}
+.border-top-thickish {
+  border-top-style: var.$border-style;
+  border-top-width: 2px;
+}
+.border-top-thick {
+  border-top-style: var.$border-style;
+  border-top-width: 3px;
+}
+.border-dotted { border-style: dotted; }
+.border-dark { border-color: var.$black-olive; }
+.rounded {border-radius: var.$round;}
+.rounded-big {border-radius: var.$round-big}
 .block { display: block; }
 .inline { display: inline; }
 .inline-block { display: inline-block; }
@@ -450,6 +462,34 @@ margin: var.$space1;
 .col-12 {width: var.$width12;}
 .width-full {width: 100%;}
 .height-full {height: 100%;}
+
+/* =========================
+  HOVER EFFECTS
+  ========================= */
+a.hover {
+  padding: 0 0 0 4px;
+  position: relative;
+}
+a.hover:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: width .3s cubic-bezier(0,.5,.3,1) 0s, opacity .3s cubic-bezier(0,.5,.3,1) 0s;
+  opacity: 0;
+}
+a.hover:before {
+  width: 50%;
+  opacity: 1;
+  background: var.$black-olive;
+}
+.postContent a {
+  font-family: var.$font-condensed;
+  border-bottom: 1px var.$border-style var.$black-olive;
+  font-weight: 500;
+}
 @include var.media(">maxWidth") {
   body {
     font-size: 20px;

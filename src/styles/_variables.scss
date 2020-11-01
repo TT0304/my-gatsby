@@ -1,3 +1,4 @@
+$border-style: dotted;
 $white: white;
 $black: black;
 $honeydew: #faf9f9;
@@ -12,11 +13,11 @@ $space3: 2rem;
 $space4: 4rem;
 $space5: 8rem;
 $container-width: 1280px;
-$font-condensed: 'IBM Plex Sans Condensed', sans-serif;
+$font-condensed: 'Fira Sans Extra Condensed', sans-serif;
 $font-platform: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
 "Oxygen", "Ubuntu", "Canterell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $font-monospace: "Inconsolata", monospace;
-$font-sans-serif: 'IBM Plex Sans', $font-platform;
+$font-sans-serif: 'Fira Sans', $font-platform;
 $white: #fff;
 $salmon: #ee8374;
 $darkseagreen: #98b28d;
@@ -38,14 +39,14 @@ $width7: 58.33333%;
 $width8: 66.66667%;
 $width9: 75%;
 $width10: 83.33333%;
-$width11: 66.66667%;
+$width11: 91.66667%;
 $width12: 100%;
 $serif: "IBM Plex Serif", Georgia, serif;
 
 /* Store breakpoints */
-$mediaMaxWidth: 72rem;
-$mediaLarge: 64rem;
-$mediaMedium: 52rem;
+$mediaXL: 75rem;
+$mediaLarge: 62rem;
+$mediaMedium: 48rem;
 $mediaSmall: 36rem;
 
 @function translate-media-condition($c) {
@@ -53,9 +54,9 @@ $mediaSmall: 36rem;
 		"screen": "only screen",
 		"print": "only print",
 		"retina": "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
-    ">maxWidth": "(min-width: #{$mediaMaxWidth + 1})",
-    "<maxWidth": "(max-width: #{$mediaMaxWidth})", 		
-    ">lgWidth": "(min-width: #{$mediaLarge})",
+    ">maxWidth": "(min-width: #{$mediaXL + 1})",
+    "<maxWidth": "(max-width: #{$mediaXL})", 		
+    ">lgWidth": "(min-width: #{$mediaLarge + 1})",
     "<lgWidth": "(max-width: #{$mediaLarge})",
 		">medWidth": "(min-width: #{$mediaMedium + 1})",
 		"<medWidth": "(max-width: #{$mediaMedium})",
