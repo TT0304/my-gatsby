@@ -1,51 +1,45 @@
 import React from "react"
+import Img from "gatsby-image"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/Layout"
+import { useSiteMetadata } from '../hooks'
 import styles from './insight.module.scss'
 
 export default ({ data }) => {
+  const { blogTitle, author } = useSiteMetadata();
+  const authorName = author['name'];
   const { allMarkdownRemark } = data
   const allPosts = [
     ...allMarkdownRemark.edges.map(e => e.node)
   ]
   console.log(allPosts);
-  console.log('Fuck you Gatsby');
   return (
-    <Layout>
-      {/* <div>
-        {data.allMarkdownRemark.edges.map(({ node }) => {
-          <div key={node.id}>
-            <Link
-              to={node.fields.link}
-            >
-              <h3>{node.frontmatter.title}</h3>
-            </Link>
-          </div>
-        })}
-      </div> */}
-      <div className={`${styles.articleList} pb4`}>
-      {allPosts.map(node => (
-          <div key={node.id}>
-          <Link
-            to={node.fields.slug}
-          >
-            <h1 className="headline sans-serif">
-              {node.frontmatter.title}
-              {/* {(() => {
-                let result
-                switch (node.internal.type) {
-                  case "MarkdownRemark":
-                    result = node.frontmatter.title
-                    break
-                  case "wordpress__POST":
-                    result = node.title
-                }
-                return result
-              })()} */}
-            </h1>
-          </Link>
-        </div>
-      ))}
+    <Layout title={`${blogTitle} | ${authorName}`}>
+      <div className={`${styles.articleList} lg-col-10 mx-auto pb4`}>
+        <ul className={styles.post__wrapper}>{allPosts.map(node => {
+          const { slug } = node.fields;
+          const { excerpt } = node;
+          const { featuredImage: img, title, description, date } = node.frontmatter;
+          const teaser = description !== null ? description : excerpt;
+          return (
+            <li data-sal="slide-up" data-sal-duration="400" data-sal-easing="ease-out" className={`${styles.post__item} relative list-style-none`} key={node.id}>
+              <small className={`${styles.post__date} monospace absolute big line-height-4`}>{date}</small>
+              <Link to={slug}>
+              <Img
+                className={styles.img__wrapper}
+                fluid={img.childImageSharp.fluid}
+              />
+                <div className={styles.post__text}>
+                  <h2 className={`${styles.post__title} display medium line-height-3 inline`}>{title}</h2>
+                  <span className={styles.post__divider}>—</span>
+                  <span className={styles.post__teaser}>{teaser}</span>
+                </div>
+              </Link>
+        </li>
+          )
+          
+})}
+      </ul>
       </div>
     </Layout>
   )
@@ -57,11 +51,23 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                  presentationWidth
+                }
+              }
+            }
             title
+            date(formatString: "MMM.DD.YYYY")
+            category
+            description
           }
           fields {
             slug
           }
+          excerpt
         }
       }
     }

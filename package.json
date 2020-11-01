@@ -25,6 +25,7 @@
     "gatsby-plugin-react-helmet-canonical-urls": "^1.4.0",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.2.1",
+    "gatsby-plugin-scroll-reveal": "0.0.7",
     "gatsby-plugin-sharp": "^2.5.4",
     "gatsby-plugin-svgr": "^2.0.2",
     "gatsby-remark-copy-linked-files": "^2.3.14",
@@ -39,10 +40,11 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
-    "typeface-ibm-plex-sans": "0.0.75",
-    "typeface-ibm-plex-sans-condensed": "0.0.61",
+    "typeface-fira-sans": "0.0.75",
+    "typeface-fira-sans-extra-condensed": "0.0.72",
     "typeface-inconsolata": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "typeface-open-sans": "0.0.75",
+    "typeface-open-sans-condensed": "0.0.72"
   },
   "devDependencies": {
     "git-scripts": "^0.4.3",

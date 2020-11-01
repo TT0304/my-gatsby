@@ -1,3 +1,124 @@
+// @mixin keyframes($animationName) {
+//   @-webkit-keyframes #{$animationName} {
+//     @content;
+//   }
+//   @-moz-keyframes #{$animationName} {
+//     @content;
+//   }
+//   @-o-keyframes #{$animationName} {
+//     @content;
+//   }
+//   @keyframes #{$animationName} {
+//     @content;
+//   }
+// }
+// @mixin animate($name, $duration, $iteration, $direction) {
+//   -webkit-animation-duration: $duration;
+//      -moz-animation-duration: $duration;
+//        -o-animation-duration: $duration;
+//           animation-duration: $duration;
+//   -webkit-animation-iteration-count: $iteration;
+//      -moz-animation-iteration-count: $iteration;
+//        -o-animation-iteration-count: $iteration;
+//           animation-iteration-count: $iteration;
+//   -webkit-animation-name: $name;
+//      -moz-animation-name: $name;
+//        -o-animation-name: $name;
+//           animation-name: $name;
+//   -webkit-animation-direction: $direction;
+//      -moz-animation-direction: $direction;
+//        -o-animation-direction: $direction;
+//           animation-direction: $direction;
+// }
+// @include keyframes(slide) {
+//   0% {
+//     transform: translateY(-100%);
+//   }
+//   100% {
+//     transform: translateY(0);
+//   }
+// }
+// @mixin slide {
+//   @include animate(slide, 0.6s, 1, normal);
+// }
 .articleList {
-  // background: cadetblue;
+}
+// :global {
+//   .post__item {
+//     background: chocolate;
+//     & :local {
+//       animation-name: slide;
+//     }
+//   }
+// }
+.post {
+  &__wrapper {
+    @include var.media("screen", ">medWidth") {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__item:nth-child(4n), &__item:nth-child(4n+1) {
+    @include var.media("screen", ">medWidth") {
+      flex: 0 1 300px;
+      margin: 0 25px 40px;
+    }
+    @include var.media("screen", ">maxWidth") {
+      flex: 0 1 380px;
+      margin: 35px 40px 50px;
+    }
+  }
+  &__item:nth-child(4n+2), &__item:nth-child(4n+3) {
+    @include var.media("screen", ">medWidth") {
+      flex: 0 1 300px;
+      margin: 0 25px 45px;
+      padding: 0;
+    }
+    @include var.media("screen", ">maxWidth") {
+      flex: 0 1 480px;
+      margin: 0 40px 60px;
+    }
+  }
+  &__item:after {
+    content: "\2015 Read more \00BB";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    opacity: 0;
+  }
+  &__item:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  &__item:hover:after {
+    opacity: 1;
+    font-size: 24px;
+    left: 10%;
+    color: var.$white;
+    filter: drop-shadow(5px 2px 2px var.$black);
+    transition: all 0.4s ease-out;
+  }
+  &__item:hover .img__wrapper {
+    filter: grayscale(100%);
+  }
+  &__date {
+    top: 20%;
+    left: -4rem;
+    transform: rotate(-90deg);
+  }
+  &__title {
+    font-size: 24px;
+  }
+  &__divider {
+    margin: 0 0.5rem;
+  }
+}
+.img__wrapper {
+  margin-bottom: 16px;
+  padding: 0 40px;
+  @include var.media("screen", ">medWidth") {
+    padding: 0;
+  }
 }
