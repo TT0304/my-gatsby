@@ -1,4 +1,8 @@
-.postBody {
+.postContent {
+  padding-top: 60px;
+  @include var.media("screen", ">maxWidth") {
+    padding-top: 130px;
+  }
   &__wrapper {
     width: 100%;
     margin-left: auto;

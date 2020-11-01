@@ -5,10 +5,10 @@ import styles from './Post.module.scss'
 
 export default function Post({post}) {
   const { html, timeToRead } = post;
-  const {title, date, featuredImage} = post.frontmatter;
+  const {title, date, featuredImage, category} = post.frontmatter;
   return (
     <article className={styles.post}>
-      <Hero title={title} image={featuredImage} date={date} />
+      <Hero title={title} image={featuredImage} date={date} topic={category} />
       <Body body={html} readingTime={timeToRead} />
     </article>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 import Img from 'gatsby-image'
 import styles from './Hero.module.scss'
 
-export default function Hero({ title, image, date }) {
+export default function Hero({ title, image, date, topic }) {
   return (
     <div className={styles.articleHero}>
       <div className={styles.articleHero__container}>
@@ -21,7 +21,9 @@ export default function Hero({ title, image, date }) {
           )}
         </div>
         <div className={styles.articleHero__text}>
-          <h1 className={`${styles.articleHero__title} huge display line-height-1 strong`}>{title}</h1>
+          {topic &&
+          <p className={`${styles.articleHero__topic} medium`}>{topic}</p>}
+          <h1 className={`${styles.articleHero__title} huge display strong`}>{title}</h1>
           <p className={`${styles.articleHero__date} line-height-5 medium`}>{`Published on ${date}`}</p>
         </div>
       </div>
