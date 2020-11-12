@@ -1,6 +1,7 @@
 import React from "react"
 import Seo from '../Seo';
 import Header from '../Header'
+import Letswork from '../Letswork'
 import Footer from '../Footer'
 // import styles from "./Layout.module.scss"
 
@@ -15,6 +16,7 @@ export default function Layout ({ children, width, pageType, title, description,
       <main className={classname}>
         {children}
       </main>
+      <Letswork />
       <Footer />
     </div>
   )

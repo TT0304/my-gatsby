@@ -1,0 +1,9 @@
+.letswork {
+  display: flex;
+  &__container {
+    margin: 0 auto;
+  }
+  &__cta {
+    font-size: 50px;
+  }
+}
