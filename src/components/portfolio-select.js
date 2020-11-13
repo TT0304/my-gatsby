@@ -1,13 +1,15 @@
 import React from "react"
-import {StaticQuery, graphql} from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styles from "./portfolio-select.module.scss"
 
 export default () => (
-  <StaticQuery 
+  <StaticQuery
     query={graphql`
       query Portfolio {
-        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(portfolio)/.*.md$/"}}) {
+        allMdx(
+          filter: { fileAbsolutePath: { regex: "/(portfolio)/.*.md$/" } }
+        ) {
           edges {
             node {
               id
@@ -33,17 +35,23 @@ export default () => (
     `}
     render={data => (
       <div className="portfolio">
-        {data.allMarkdownRemark.edges.map(({ node }) => (
+        {data.allMdx.edges.map(({ node }) => (
           <div className={`${styles.project} items-center mb3`}>
-          {/* <Img 
+            {/* <Img 
             fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
             style={{ flex: '1', marginLeft: '-6rem'}}
           /> */}
-          <img className={styles.project__featuredImg} src={node.frontmatter.gif.publicURL} alt="Blah" />
-          <div className={`${styles.project__info} z4 border-thick`}>
-            <h3 className={styles.project__name}>{node.frontmatter.title}</h3>
-            <p className={styles.project__desc}>{node.frontmatter.description}</p>
-          </div>
+            <img
+              className={styles.project__featuredImg}
+              src={node.frontmatter.gif.publicURL}
+              alt="Blah"
+            />
+            <div className={`${styles.project__info} z4 border-thick`}>
+              <h3 className={styles.project__name}>{node.frontmatter.title}</h3>
+              <p className={styles.project__desc}>
+                {node.frontmatter.description}
+              </p>
+            </div>
           </div>
         ))}
       </div>

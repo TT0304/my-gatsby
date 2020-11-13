@@ -14,11 +14,19 @@
       align-items: center;
       flex-direction: row;
       margin-bottom: 0;
-      transition: margin-bottom .3s ease-out;
+      transition: margin-bottom 0.3s ease-out;
       width: 100%;
     }
   }
   &__media {
+    @include var.media("screen", ">maxWidth") {
+      margin-right: 3.125%;
+      padding-top: 0;
+      width: 53.125%;
+    }
+    @include var.media("screen", ">medWidth") {
+      padding-top: 105px;
+    }
     padding-top: 80px;
     position: relative;
   }
@@ -27,7 +35,7 @@
     margin: 30px auto 60px;
     left: 0;
     opacity: 1;
-    transition: left .3s ease-out .7s, opacity .3s ease-out .7s;
+    transition: left 0.3s ease-out 0.7s, opacity 0.3s ease-out 0.7s;
     width: 87.5%;
     @include var.media("screen", ">medWidth") {
       margin-bottom: 100px;
@@ -57,7 +65,7 @@
   }
   &__date {
     opacity: 1;
-    transition: opacity .3s ease-out 1s;
+    transition: opacity 0.3s ease-out 1s;
   }
   @media only screen and (min-width: 72rem) {
     font-size: 20px;

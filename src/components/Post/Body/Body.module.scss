@@ -3,6 +3,20 @@
   @include var.media("screen", ">maxWidth") {
     padding-top: 130px;
   }
+  h2 {
+    @include var.media("screen", ">maxWidth") {
+      font-size: 40px;
+      line-height: 1.5;
+      margin-top: 50px;
+    }
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 30px 0 15px;
+  }
+  img {
+    width: 100%;
+  }
   &__wrapper {
     width: 100%;
     margin-left: auto;
@@ -43,7 +57,7 @@
       width: 68.18182%;
     }
   }
-  &__content>:first-child {
+  &__content > :first-child {
     margin-top: 0;
   }
 }

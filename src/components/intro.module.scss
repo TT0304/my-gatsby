@@ -1,12 +1,13 @@
-@include var.media("screen", ">maxWidth") {
-  .intro {
-    width: 100%;
-  }
+.intro {
+  width: 100%;
+  @include var.media("screen", ">maxWidth") {
     h2 {
       font-size: 2.4rem;
       line-height: 60px;
     }
+  }
 }
+
 // @media (min-width: 72rem) {
 //   .intro {
 //     padding-bottom: 2rem;
