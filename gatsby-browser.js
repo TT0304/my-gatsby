@@ -1,8 +1,8 @@
-import 'typeface-ibm-plex-sans-condensed'
-import 'typeface-ibm-plex-sans'
+import "typeface-archivo"
+import "typeface-archivo-narrow"
 import "./src/styles/_global.scss"
 export const onInitialClientRender = () => {
   setTimeout(function() {
-    document.getElementById('__loader').style.display = "none"
-  }, 1000)
+    document.getElementById("__loader").style.display = "none"
+  }, 900)
 }

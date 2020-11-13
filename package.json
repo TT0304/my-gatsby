@@ -15,6 +15,7 @@
     "deploy": "gatsby build && surge public/"
   },
   "dependencies": {
+    "@deckdeckgo/highlight-code": "^2.1.1",
     "@mdx-js/mdx": "^1.6.16",
     "@mdx-js/react": "^1.6.16",
     "@svgr/webpack": "^5.4.0",
@@ -29,6 +30,7 @@
     "gatsby-plugin-sharp": "^2.5.4",
     "gatsby-plugin-svgr": "^2.0.2",
     "gatsby-remark-copy-linked-files": "^2.3.14",
+    "gatsby-remark-highlight-code": "^2.1.0",
     "gatsby-remark-images": "^3.2.5",
     "gatsby-remark-interactive-gifs": "^1.0.3",
     "gatsby-source-filesystem": "^2.2.2",
@@ -40,11 +42,11 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",
+    "typeface-archivo": "^1.1.13",
+    "typeface-archivo-narrow": "^1.1.13",
     "typeface-fira-sans": "0.0.75",
     "typeface-fira-sans-extra-condensed": "0.0.72",
-    "typeface-inconsolata": "0.0.72",
-    "typeface-open-sans": "0.0.75",
-    "typeface-open-sans-condensed": "0.0.72"
+    "typeface-inconsolata": "0.0.72"
   },
   "devDependencies": {
     "git-scripts": "^0.4.3",
