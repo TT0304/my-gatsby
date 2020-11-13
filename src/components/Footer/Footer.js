@@ -5,8 +5,9 @@ export default function Footer ({ children }) {
   const smList = ['Twitter', 'Github'];
   // const url = `https://${smList.toLowerCase()}.com/bytrangle`;
   return (
-    <footer className={`pt3 pb3 ${styles.footer}`}>
-      <p className="normal monospace">Too much, too soon? Connect with me on
+    <footer className={`pt3 pb3 border-top-thick border-dark ${styles.footer}`}>
+      <div className="max-width-3 mx-auto">
+        <div className="normal monospace">Too much, too soon? Connect with me on
         <ul className={`${styles.socialMedia} huge flex p0 list-style-none`}>
         {smList.map((item, index) => (
           <li key={index} className={`${styles.socialMedia__li} inline`}>
@@ -18,7 +19,8 @@ export default function Footer ({ children }) {
           </li>
         ))}
         </ul>
-      </p>
+      </div>
+      </div>
     </footer>
   )
 }
