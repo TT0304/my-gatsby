@@ -20,7 +20,7 @@ import clientRedirectFlow from './client-side-redirect-outcome.gif'
 
 So your website is running happily with Gatsby. However, like every digital product, it is bound to grow and evolve. One candidate for change that you probably don't give much thought to is URL architecture.
 
-A blog post that started out at a URL like `http://yourdomain.com/how-to-make-your-website-faster` may be redirected to `http://yourdomain.com/blog/how-to-make-your-website-faster`.
+A blog post that started out at a URL like `http://yourdomain.com/website-speed` may be redirected to `http://yourdomain.com/blog/how-to-make-your-website-faster`.
 
 Another scenario that you may find yourself in is when your content attracts a large following, prompting you to offer a gated section for subscribers.
 
@@ -272,6 +272,6 @@ I'd like to show you demo for it, but role-based access is a feature of the busi
 
 As a wrap, here is the final client-side redirect workflow.
 
-<img src={clientRedirectFlow} alt="client-redirect-flow />
+<img src={clientRedirectFlow} alt="client-redirect-flow" />
 
 Do you have a better way to do client-side redirect with Gatsby? Please head to the comments to share your tricks of the trade.
