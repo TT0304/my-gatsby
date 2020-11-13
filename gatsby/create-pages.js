@@ -1,11 +1,11 @@
 const path = require("path")
-const { slash } = require("gatsby-core-utils");
+const { slash } = require("gatsby-core-utils")
 
 const createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
   const result = await graphql(`
     {
-      allMarkdownRemark {
+      allMdx {
         edges {
           node {
             fields {
@@ -15,15 +15,15 @@ const createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `);
-  console.log(JSON.stringify(result, null, 4));
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  `)
+  console.log(JSON.stringify(result, null, 4))
+  result.data.allMdx.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve('./src/templates/post-template.js'),
+      component: path.resolve("./src/templates/post-template.js"),
       context: {
-        slug: node.fields.slug
-      }
+        slug: node.fields.slug,
+      },
     })
   })
 }

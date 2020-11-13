@@ -1,5 +1,6 @@
-import React from 'react'
-import styles from './Body.module.scss'
+import React from "react"
+import { MDXRenderer } from "gatsby-plugin-mdx"
+import styles from "./Body.module.scss"
 
 export default function Body({ body, readingTime }) {
   return (
@@ -8,10 +9,14 @@ export default function Body({ body, readingTime }) {
         <div className={styles.postContent__container}>
           <div className={styles.postContent__sidebar}>
             <div className={styles.readingTime}>
-            {`${readingTime} min remaining`}
+              {`${readingTime} min remaining`}
             </div>
           </div>
-          <div className={`${styles.postContent__content} postContent line-height-5`} dangerouslySetInnerHTML={{ __html: body}}></div>
+          <div
+            className={`${styles.postContent__content} postContent line-height-5`}
+          >
+            <MDXRenderer>{body}</MDXRenderer>
+          </div>
         </div>
       </div>
     </div>
