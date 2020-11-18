@@ -64,7 +64,7 @@ export default ({ data }) => {
 export const pageQuery = graphql`
   query {
     allMdx(
-      filter: { fileAbsolutePath: { regex: "/content/" } }
+      filter: { fileAbsolutePath: { regex: "/insight/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
