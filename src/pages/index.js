@@ -5,10 +5,10 @@ import ArticleList from "../components/article-list-homepage"
 import Portfolio from "../components/portfolio-select"
 
 export default () => (
-  <Layout width="max" pageType="page">
+  <Layout width="max" pageType="page" headerPosition="right">
     <Intro>
-      Hey there. I am Trang Le, a front-end developer. I work with result-driven folks who are sick of shiny websites which no one returns to.
-      
+      Hey there. I am Trang Le, a front-end developer. I work with result-driven
+      folks who are sick of shiny websites which no one returns to.
     </Intro>
     <section className="hp-secondary">
       <h2 className="center section-title">

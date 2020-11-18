@@ -30,6 +30,7 @@ $width-1: 24rem;
 $width-2: 32rem;
 $width-3: 48rem;
 $width-4: 72rem;
+$width-vw-2: 74.5vw;
 $width1: 8.33333%;
 $width2: 16.66667%;
 $width3: 25%;
@@ -45,10 +46,10 @@ $width12: 100%;
 $serif: "IBM Plex Serif", Georgia, serif;
 
 /* Store breakpoints */
-$mediaXL: 75rem;
-$mediaLarge: 62rem;
-$mediaMedium: 48rem;
-$mediaSmall: 36rem;
+$mediaXL: 1200px;
+$mediaLarge: 900px;
+$mediaMedium: 768px;
+$mediaSmall: 480px;
 
 @function translate-media-condition($c) {
   $condMap: (

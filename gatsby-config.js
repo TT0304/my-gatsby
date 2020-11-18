@@ -13,6 +13,7 @@ module.exports = {
     description: siteConfig.description,
     copyright: siteConfig.copyright,
     author: siteConfig.author,
+    tagline: siteConfig.tagline,
   },
   plugins: [
     {
@@ -63,15 +64,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `mdpost`,
+        name: `content`,
         path: `${__dirname}/content`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "portfolio",
-        path: `${__dirname}/src/portfolio`,
       },
     },
     `gatsby-plugin-sharp`,
