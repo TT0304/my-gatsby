@@ -31,9 +31,10 @@ export default ({ data }) => {
                 </div>
               </div>
               <div
-                className={`${styles.project__image} border-dark border-thickish`}
+                className={`${styles.project__image} flex border-dark border-thickish`}
               >
                 <img
+                  className="self-start"
                   src={node.frontmatter.gif.publicURL}
                   alt={node.frontmatter.title}
                 />
