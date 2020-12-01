@@ -125,7 +125,7 @@ On the other hand, my demo Gatsby app uses client-side redirect, so you only see
 
 With that said, when should you use which?
 
-Usually, client-side rendering is for intra-site linking, when you link to other pages within your site. Also, when you navigate via client-side rendering, you won't see
+Usually, client-side rendering is for intra-site linking, when you link to other pages within your site. Also, when you navigate via client-side rendering, you avoid making a request to the server. Your users won't see a flash in the browser and overall your app will look snappier.
 
 On the other hand, server-side redirects take care of inter-site linking: other sites navigating to your site on a broken link. You have no control over Javascript of other websites, and doing it from the server is the only way to go.
 

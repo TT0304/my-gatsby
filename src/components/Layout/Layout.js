@@ -14,17 +14,19 @@ export default function Layout({
   socialImg,
   headerPosition,
 }) {
+  const mainClass = width === "constrained" ? "container" : "none"
   return (
     <div
       id={pageType}
-      className={`layout relative ${
-        width === "constrained" ? "width-constrained mx-auto" : "width-auto"
-      }`}
+      // className={`layout relative ${
+      //   width === "constrained" ? "width-constrained mx-auto" : "width-auto"
+      // }`}
+      className="relative width-auto"
     >
       <Seo title={title} description={description} socialImg={socialImg} />
       {/* {pageType === "page" ? <Header position={headerPosition} /> : null} */}
       <Header position={headerPosition} />
-      <main className={`content__main`}>{children}</main>
+      <main>{children}</main>
       <Letswork />
       <Footer />
     </div>

@@ -1,29 +1,15 @@
 .intro {
   width: 100%;
-  @include var.media("screen", ">maxWidth") {
-    h2 {
-      font-size: 2.4rem;
-      line-height: 60px;
-    }
-  }
+}
+.heading {
+  font-size: 6.8333rem;
+  line-height: 5.8888rem;
+  letter-spacing: -0.1111rem;
 }
 
-// @media (min-width: 72rem) {
+// @include var.media("screen", "<medWidth") {
 //   .intro {
-//     padding-bottom: 2rem;
+//     font-size: 33px;
+//     line-height: 30px;
 //   }
-//     h2 {
-//       width: 100%;
-      
-      
-//     }
-// }
-@include var.media("screen", "<medWidth") {
-  .intro {
-    font-size: 33px;
-    line-height: 30px;
-  }
-}
-// .intro {
-//   border-bottom: 1px dashed g.$gunmetal;
 // }

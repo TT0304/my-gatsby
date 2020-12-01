@@ -11,18 +11,12 @@ export default function Header({ position }) {
       <div className={styles[header]}>
         {position === "right" ? (
           <nav className={styles.nav}>
-            <ul className={`${styles.nav__list} flex relative list-style-none`}>
-              <li className={styles.link}>
-                <div className={`${styles.link__wrapper} relative`}>
-                  <Link
-                    className={`${styles.link__anchor} uppercase`}
-                    to="/insight"
-                  >
-                    Insight
-                  </Link>
-                </div>
-              </li>
-            </ul>
+            <Link className={`${styles.link} uppercase`} to="/insight">
+              Insight
+            </Link>
+            <Link className={`${styles.link} uppercase`} to="/work">
+              Work
+            </Link>
           </nav>
         ) : (
           <Link to="/">Trang Le</Link>
