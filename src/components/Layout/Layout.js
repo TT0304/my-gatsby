@@ -9,12 +9,14 @@ export default function Layout({
   children,
   width,
   pageType,
+  hasMargin,
   title,
   description,
   socialImg,
   headerPosition,
 }) {
-  const mainClass = width === "constrained" ? "container" : "none"
+  const mainClass = width === "fixed" ? "container" : "none"
+  console.log(hasMargin)
   return (
     <div
       id={pageType}
@@ -26,7 +28,9 @@ export default function Layout({
       <Seo title={title} description={description} socialImg={socialImg} />
       {/* {pageType === "page" ? <Header position={headerPosition} /> : null} */}
       <Header position={headerPosition} />
-      <main>{children}</main>
+      <main className={`main container`} width={width}>
+        {children}
+      </main>
       <Letswork />
       <Footer />
     </div>

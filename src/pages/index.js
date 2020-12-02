@@ -5,13 +5,11 @@ import ArticleList from "../components/article-list-homepage"
 import Portfolio from "../components/portfolio-select"
 
 export default () => (
-  <Layout width="constrained" pageType="page" headerPosition="right">
-    <section class="content-block mt4 mb5">
-      <div class="container max-width-4">
-        <Intro>Making speedy, useful things that they want to revisit.</Intro>
-      </div>
+  <Layout width="fixed" pageType="page" headerPosition="right">
+    <section class="content-block mt4 mb4 lg-mb6">
+      <Intro>Making speedy, useful things that they want to revisit.</Intro>
     </section>
-    <section className="hp-secondary">
+    <section className="hp-secondary width-full">
       <h2 className="center section-title">
         <span>Featured Projects</span>
       </h2>

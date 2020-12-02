@@ -60,23 +60,25 @@
       justify-content: center;
     }
   }
-  &__item:nth-child(4n), &__item:nth-child(4n+1) {
+  &__item:nth-child(4n),
+  &__item:nth-child(4n + 1) {
     @include var.media("screen", ">medWidth") {
       flex: 0 1 300px;
       margin: 0 25px 40px;
     }
-    @include var.media("screen", ">maxWidth") {
+    @include var.media("screen", ">xlWidth") {
       flex: 0 1 380px;
       margin: 35px 40px 50px;
     }
   }
-  &__item:nth-child(4n+2), &__item:nth-child(4n+3) {
+  &__item:nth-child(4n + 2),
+  &__item:nth-child(4n + 3) {
     @include var.media("screen", ">medWidth") {
       flex: 0 1 300px;
       margin: 0 25px 45px;
       padding: 0;
     }
-    @include var.media("screen", ">maxWidth") {
+    @include var.media("screen", ">xlWidth") {
       flex: 0 1 480px;
       margin: 0 40px 60px;
     }

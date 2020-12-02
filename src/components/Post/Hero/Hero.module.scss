@@ -19,7 +19,7 @@
     }
   }
   &__media {
-    @include var.media("screen", ">maxWidth") {
+    @include var.media("screen", ">xlWidth") {
       margin-right: 3.125%;
       padding-top: 0;
       width: 53.125%;
@@ -42,13 +42,13 @@
       margin-top: 40px;
       width: 68.75%;
     }
-    @include var.media("screen", ">maxWidth") {
+    @include var.media("screen", ">xlWidth") {
       width: 34.375%;
     }
   }
   &__topic {
     text-transform: capitalize;
-    @include var.media("screen", ">maxWidth") {
+    @include var.media("screen", ">xlWidth") {
       font-size: 22px;
       margin-top: 0;
     }
@@ -58,7 +58,7 @@
     letter-spacing: -4px;
     font-size: 60px;
     line-height: 1.35;
-    @include var.media("screen", ">maxWidth") {
+    @include var.media("screen", ">xlWidth") {
       font-size: 72px;
       margin-top: 15px;
     }

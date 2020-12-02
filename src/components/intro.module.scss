@@ -2,14 +2,19 @@
   width: 100%;
 }
 .heading {
-  font-size: 6.8333rem;
-  line-height: 5.8888rem;
+  font-size: 4.78rem;
+  line-height: 4.01rem;
   letter-spacing: -0.1111rem;
+  @include var.media(">medWidth") {
+    font-size: 5.02rem;
+    line-height: 4.2rem;
+  }
+  @include var.media(">lgWidth") {
+    font-size: 5.37rem;
+    line-height: 5.1111rem;
+  }
+  @include var.media(">xlWidth") {
+    font-size: 5.8333rem;
+    line-height: 5.5555rem;
+  }
 }
-
-// @include var.media("screen", "<medWidth") {
-//   .intro {
-//     font-size: 33px;
-//     line-height: 30px;
-//   }
-// }
