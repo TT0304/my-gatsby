@@ -8,8 +8,8 @@ export default () => (
     query={graphql`
       query {
         allMdx(
-          filter: { fileAbsolutePath: { regex: "/(markdown)/.*.md$/" } }
-          limit: 6
+          filter: { fileAbsolutePath: { regex: "/(insight)/.*.md$/" } }
+          limit: 1
           sort: { fields: frontmatter___date, order: DESC }
         ) {
           totalCount

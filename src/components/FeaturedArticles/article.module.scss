@@ -1,0 +1,39 @@
+.post__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.post__link {
+}
+.post {
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  &__preview {
+    font-size: 1.25rem;
+    line-height: 1.3333rem;
+    max-width: 16em;
+    p {
+      margin: 0;
+    }
+    @include var.media("screen", ">xlWidth") {
+      font-size: 1.875rem;
+      line-height: 2.1111rem;
+    }
+  }
+  &__info {
+    font-size: 1.5rem;
+  }
+  &__info span {
+    display: inline-block;
+    margin-right: 0.6rem;
+  }
+  &__category {
+    font-size: 0.875rem;
+    letter-spacing: -0.02em;
+  }
+}

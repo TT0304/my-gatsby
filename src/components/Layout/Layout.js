@@ -16,7 +16,6 @@ export default function Layout({
   headerPosition,
 }) {
   const mainClass = width === "fixed" ? "container" : "none"
-  console.log(hasMargin)
   return (
     <div
       id={pageType}

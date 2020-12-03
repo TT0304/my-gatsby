@@ -1,21 +1,28 @@
 /* Root document */
 :root {
+  --color-black: black;
+  --color-honeydew: #faf9f9;
+  --font-platform: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  --font-sans-serif: "Raleway", var(--font-platform);
   --space0: 0;
   --space-quarter: 0.25rem;
   --space-half: 0.5rem;
   --space1: 1rem;
   --space2: 2rem;
+  --space3: 3rem;
   --space4: 4rem;
   --space6: 6rem;
   --space8: 8rem;
   --width1: 8.33333%;
   --width2: 16.66667%;
   --width3: 25%;
-  --width4: 33.33333%;
-  --width5: 41.66667%;
-  --width6: 50%;
-  --width7: 58.33333%;
-  --width8: 66.66667%;
+  --width4-12: 33.33333%;
+  --width5-12: 41.66667%;
+  --width6-12: 50%;
+  --width7-12: 58.33333%;
+  --width8-12: 66.66667%;
   --width9: 75%;
   --width10: 83.33333%;
   --width11: 91.66667%;
@@ -24,49 +31,30 @@
 /* =========================
   GLOBAL SETTINGS 
   ========================= */
-#__loader {
-  background-color: var.$black-olive;
-  svg {
-    width: 4rem;
-    height: auto;
-    rect {
-      fill: var.$mint;
-    }
-  }
-}
+// #__loader {
+//   background-color: var.$black-olive;
+//   svg {
+//     width: 4rem;
+//     height: auto;
+//     rect {
+//       fill: var.$mint;
+//     }
+//   }
+// }
 
 .width-constrained {
   max-width: var.$width-vw-2;
 }
 
-.max-width-1 {
-  max-width: var.$width9;
-}
-.max-width-2 {
-  max-width: var.$width10;
-}
-.max-width-3 {
-  max-width: var.$width11;
-}
-.max-width-4 {
-  max-width: var.$width12;
-}
-
 html,
 body {
-  font-family: var.$font-sans-serif;
+  font-family: var(--font-sans-serif);
   margin: 0;
   padding: 0;
   font-size: 16px;
   font-weight: normal;
-  color: var.$black;
-  background: var.$honeydew;
-  @include var.media(">medWidth") {
-    font-size: 20px;
-  }
-  @include var.media(">xlWidth") {
-    font-size: 22px;
-  }
+  color: var(--color-black);
+  background: var(--color-honeydew);
 }
 * {
   -webkit-box-sizing: border-box;
@@ -177,7 +165,7 @@ img {
   font-family: var.$font-monospace;
 }
 .sans-serif {
-  font-family: var.$font-sans-serif;
+  font-family: var(--font-sans-serif);
 }
 /* TYPOGRAPHY
   ----------------------------- */
@@ -194,7 +182,7 @@ h3 {
 h4,
 h5,
 h6 {
-  font-family: var.$font-sans-serif;
+  font-family: var(--font-sans-serif);
 }
 h1,
 h2,
@@ -475,25 +463,29 @@ h5.huge,
 .mln8 {
   margin-left: -var(--space8);
 }
+.mxn-half {
+  margin-left: calc(var(--space-half) * -1);
+  margin-right: calc(var(--space-half) * -1);
+}
 .mxn1 {
-  margin-left: -(var.$space1);
-  margin-right: -(var.$space1);
+  margin-left: calc(var(--space1) * -1);
+  margin-right: calc(var(--space1) * -1);
 }
 .mxn2 {
-  margin-left: -(var.$space2);
-  margin-right: -(var.$space2);
-}
-.mxn3 {
-  margin-left: -(var.$space3);
-  margin-right: -(var.$space3);
+  margin-left: calc(var(--space2) * -1);
+  margin-right: calc(var(--space2) * -1);
 }
 .mxn4 {
-  margin-left: -(var.$space4);
-  margin-right: -(var.$space4);
+  margin-left: calc(var(--space4) * -1);
+  margin-right: calc(var(--space4) * -1);
 }
-.mxn5 {
-  margin-left: -(var.$space5);
-  margin-right: -(var.$space5);
+.mxn6 {
+  margin-left: calc(var(--space6) * -1);
+  margin-right: calc(var(--space6) * -1);
+}
+.mxn8 {
+  margin-left: calc(var(--space8) * -1);
+  margin-right: calc(var(--space8) * -1);
 }
 /* Position
 ========================================================================== */
@@ -536,10 +528,25 @@ h5.huge,
   padding-top: var.$space0;
 }
 .pr0 {
-  padding-right: var.$space0;
+  padding-right: var(--space0);
 }
 .pb0 {
-  padding-bottom: var.$space0;
+  padding-bottom: var(--space0);
+}
+.pb1 {
+  padding-bottom: var(--space1);
+}
+.pb2 {
+  padding-bottom: var(--space2);
+}
+.pb3 {
+  padding-bottom: var(--space3);
+}
+.pb4 {
+  padding-bottom: var(--space4);
+}
+.pb5 {
+  padding-bottom: var(--space5);
 }
 .pl0 {
   padding-left: var.$space0;
@@ -561,9 +568,7 @@ h5.huge,
 .pr1 {
   padding-right: var.$space1;
 }
-.pb1 {
-  padding-bottom: var.$space1;
-}
+
 .pl1 {
   padding-left: var.$space1;
 }
@@ -583,9 +588,6 @@ h5.huge,
 }
 .pr2 {
   padding-right: var.$space2;
-}
-.pb2 {
-  padding-bottom: var.$space2;
 }
 .pl2 {
   padding-left: var.$space2;
@@ -607,9 +609,6 @@ h5.huge,
 .pr3 {
   padding-right: var.$space3;
 }
-.pb3 {
-  padding-bottom: var.$space3;
-}
 .pl3 {
   padding-left: var.$space3;
 }
@@ -621,7 +620,6 @@ h5.huge,
   padding-left: var.$space3;
   padding-right: var.$space3;
 }
-
 .p4 {
   padding: var.$space4;
 }
@@ -630,9 +628,6 @@ h5.huge,
 }
 .pr4 {
   padding-right: var.$space4;
-}
-.pb4 {
-  padding-bottom: var.$space4;
 }
 .pl4 {
   padding-left: var.$space4;
@@ -654,9 +649,6 @@ h5.huge,
 }
 .pr5 {
   padding-right: var.$space5;
-}
-.pb5 {
-  padding-bottom: var.$space5;
 }
 .pl5 {
   padding-left: var.$space5;
@@ -771,6 +763,18 @@ h5.huge,
 /* =========================
  ** PRIMARY LAYOUT
   ========================= */
+.max-width-1 {
+  max-width: var.$width9;
+}
+.max-width-2 {
+  max-width: var.$width10;
+}
+.max-width-3 {
+  max-width: var.$width11;
+}
+.max-width-4 {
+  max-width: var.$width12;
+}
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -922,19 +926,19 @@ main.container[width="fixed"] {
   width: var.$width3;
 }
 .col-4 {
-  width: var.$width4;
+  width: var(--width4-12);
 }
 .col-5 {
-  width: var.$width5;
+  width: var(--width5-12);
 }
 .col-6 {
-  width: var.$width6;
+  width: var(--width6-12);
 }
 .col-7 {
-  width: var.$width7;
+  width: var(--width7-12);
 }
 .col-8 {
-  width: var.$width8;
+  width: var(--width8-12);
 }
 .col-9 {
   width: var.$width9;
@@ -1007,19 +1011,19 @@ a.hover:before {
     width: var.$width3;
   }
   .md-col-4 {
-    width: var.$width4;
+    width: var(--width4-12);
   }
   .md-col-6 {
-    width: var.$width5;
+    width: var(--width5-12);
   }
   .md-col-6 {
-    width: var.$width6;
+    width: var(--width6-12);
   }
   .md-col-7 {
-    width: var.$width7;
+    width: var(--width7-12);
   }
   .md-col-8 {
-    width: var.$width8;
+    width: var(--width8-12);
   }
 }
 
@@ -1048,19 +1052,19 @@ a.hover:before {
     width: var.$width3;
   }
   .lg-col-4 {
-    width: var.$width4;
+    width: var(--width4-12);
   }
   .lg-col-5 {
-    width: var.$width5;
+    width: var(--width5-12);
   }
   .lg-col-6 {
-    width: var.$width6;
+    width: var(--width6-12);
   }
   .lg-col-7 {
-    width: var.$width7;
+    width: var(--width7-12);
   }
   .lg-col-8 {
-    width: var.$width8;
+    width: var(--width8-12);
   }
   .lg-col-9 {
     width: var.$width9;
@@ -1077,6 +1081,9 @@ a.hover:before {
   .lg-flex {
     display: flex;
   }
+  .lg-flex-reverse {
+    flex-direction: row-reverse;
+  }
   .lg-m0 {
     margin: var(--space0);
   }
@@ -1085,6 +1092,21 @@ a.hover:before {
   }
   .lg-mr0 {
     margin-right: var(--space0);
+  }
+  .lg-mr1 {
+    margin-right: var(--space1);
+  }
+  .lg-mr2 {
+    margin-right: var(--space2);
+  }
+  .lg-mr3 {
+    margin-right: var(--space3);
+  }
+  .lg-mr4 {
+    margin-right: var(--space4);
+  }
+  .lg-mr5 {
+    margin-right: var(--space5);
   }
   .lg-mb0 {
     margin-bottom: var(--space0);
@@ -1106,6 +1128,18 @@ a.hover:before {
   }
   .lg-ml0 {
     margin-left: var(--space0);
+  }
+  .lg-ml1 {
+    margin-left: var(--space1);
+  }
+  .lg-ml2 {
+    margin-left: var(--space2);
+  }
+  .lg-ml3 {
+    margin-left: var(--space3);
+  }
+  .lg-ml4 {
+    margin-left: var(--space4);
   }
   .lg-mx0 {
     margin-left: var(--space0);
@@ -1159,6 +1193,7 @@ a.hover:before {
   }
 }
 @include var.media(">xlWidth") {
+  html,
   body {
     font-size: 20px;
   }
@@ -1172,19 +1207,19 @@ a.hover:before {
     width: var.$width3;
   }
   .xl-col-4 {
-    width: var.$width4;
+    width: var(--width4-12);
   }
   .xl-col-5 {
-    width: var.$width5;
+    width: var(--width5-12);
   }
   .xl-col-6 {
-    width: var(--width6);
+    width: var(--width6-12);
   }
   .xl-col-7 {
-    width: var(--width7);
+    width: var(--width7-12);
   }
   .xl-col-8 {
-    width: var.$width8;
+    width: var(--width8-12);
   }
   .xl-col-9 {
     width: var.$width9;
@@ -1201,24 +1236,51 @@ a.hover:before {
   .xl-mt0 {
     margin-top: var(--space0);
   }
+  .xl-ml1 {
+    margin-left: var(--space1);
+  }
+  .xl-ml2 {
+    margin-left: var(--space2);
+  }
+  .xl-ml3 {
+    margin-left: var(--space3);
+  }
+  .xl-ml4 {
+    margin-left: var(--space4);
+  }
+  .xl-mr1 {
+    margin-right: var(--space1);
+  }
+  .xl-mr2 {
+    margin-right: var(--space2);
+  }
+  .xl-mr3 {
+    margin-right: var(--space3);
+  }
+  .xl-mr4 {
+    margin-right: var(--space4);
+  }
   .xl-mx0 {
     margin-left: var(--space0);
     margin-right: var(--space0);
   }
   .xl-mln1 {
-    margin-right: calc(var(--space1) * -1);
+    margin-left: calc(var(--space1) * -1);
   }
   .xl-mln2 {
-    margin-right: calc(var(--space2) * -1);
+    margin-left: calc(var(--space2) * -1);
+  }
+  .xl-mln3 {
+    margin-left: calc(var(--space3) * -1);
   }
   .xl-mln4 {
-    margin-right: calc(var(--space4) * -1);
+    margin-left: calc(var(--space4) * -1);
   }
   .xl-mln6 {
-    margin-right: calc(var(--space6) * -1);
+    margin-left: calc(var(--space6) * -1);
   }
   .xl-mln8 {
-    margin-right: calc(var(--space8) * -1);
+    margin-left: calc(var(--space8) * -1);
   }
   .xl-mrn1 {
     margin-right: var.$space1 * -1;

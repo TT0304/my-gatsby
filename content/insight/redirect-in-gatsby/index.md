@@ -1,6 +1,6 @@
 ---
 "title": "All about Redirect with Gatsby"
-"description": "Gatsby is cool, Gatsby is perfect. But can it redirect, a common requirement for modern web apps? Let's find out."
+"description": "Gatsby is cool, Gatsby is perfect. But how easy it is to set up redirect in Gatsby, a common requirement for modern web apps? Let's find out."
 "date": "2020-11-12"
 "featuredImage": "direction-signage.jpg"
 "category": "web development"

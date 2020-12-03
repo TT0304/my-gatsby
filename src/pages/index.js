@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 import Intro from "../components/intro"
-import ArticleList from "../components/article-list-homepage"
+import FeaturedArticles from "../components/FeaturedArticles"
 import Portfolio from "../components/portfolio-select"
 
 export default () => (
@@ -15,11 +15,11 @@ export default () => (
       </h2>
       <Portfolio />
     </section>
-    <section className="hp-tertiary pt3 mb4 mx-auto">
+    <section className="hp-tertiary width-full mx-auto">
       <h2 className="center section-title">
-        <span className="honeydew">Recently I've Learned</span>
+        <span className="honeydew">Useful Read</span>
       </h2>
-      <ArticleList />
+      <FeaturedArticles />
     </section>
   </Layout>
 )
