@@ -15,13 +15,6 @@ export default () => (
               frontmatter {
                 title
                 description
-                featuredImage {
-                  childImageSharp {
-                    fluid(maxWidth: 800) {
-                      ...GatsbyImageSharpFluid
-                    }
-                  }
-                }
                 gif {
                   relativePath
                   publicURL
