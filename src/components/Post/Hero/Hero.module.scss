@@ -55,11 +55,10 @@
   }
   &__title {
     margin: 15px 0 0;
-    letter-spacing: -4px;
+    letter-spacing: -2px;
     font-size: 60px;
-    line-height: 1.35;
     @include var.media("screen", ">xlWidth") {
-      font-size: 72px;
+      font-size: 80px;
       margin-top: 15px;
     }
   }

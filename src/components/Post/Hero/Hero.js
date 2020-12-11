@@ -1,6 +1,6 @@
-import React from 'react'
-import Img from 'gatsby-image'
-import styles from './Hero.module.scss'
+import React from "react"
+import Img from "gatsby-image"
+import styles from "./Hero.module.scss"
 
 export default function Hero({ title, image, date, topic }) {
   return (
@@ -11,20 +11,27 @@ export default function Hero({ title, image, date, topic }) {
           {image !== null && (
             <Img
               fluid={image.childImageSharp.fluid}
-              className='width-full lg-mrn3'
+              className="width-full lg-mrn3"
               style={{
-                height: '460px',
-                marginBottom: '1rem'
+                height: "460px",
+                marginBottom: "1rem",
               }}
-              placeholderStyle={{ paddingBottom: '0'}}
+              placeholderStyle={{ paddingBottom: "0" }}
             />
           )}
         </div>
         <div className={styles.articleHero__text}>
-          {topic &&
-          <p className={`${styles.articleHero__topic} medium`}>{topic}</p>}
-          <h1 className={`${styles.articleHero__title} huge display strong`}>{title}</h1>
-          <p className={`${styles.articleHero__date} line-height-5 medium`}>{`Published on ${date}`}</p>
+          {topic && (
+            <p className={`${styles.articleHero__topic} medium`}>{topic}</p>
+          )}
+          <h1
+            className={`${styles.articleHero__title} display line-height-1 strong`}
+          >
+            {title}
+          </h1>
+          <p
+            className={`${styles.articleHero__date} line-height-5 medium`}
+          >{`Published on ${date}`}</p>
         </div>
       </div>
     </div>
