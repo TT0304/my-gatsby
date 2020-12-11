@@ -54,11 +54,6 @@
     "surge": "^0.21.6",
     "typescript": "^3.8.3"
   },
-  "git": {
-    "scripts": {
-      "pre-push": "gatsby build && surge --project ./public"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
