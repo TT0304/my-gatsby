@@ -1,10 +1,13 @@
 ---
-# Write about dynamic vs static site
-
 title: "What's the deal with static site"
 date: "2020-12-11"
 description: "The simplest explanation for static sites, and whether you need them for to power your next dream app."
 featuredImage: "network.jpg"
+titledImage:
+  {
+    path: "network.jpg",
+    credit: '<span>Photo by <a href="https://unsplash.com/@dulgier?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Nastya Dulhiier</a> on <a href="https://unsplash.com/s/photos/network?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
+  }
 category: "web development"
 target: "non-programmers"
 tags: ["wordpress", "static site generator", "gatsby"]

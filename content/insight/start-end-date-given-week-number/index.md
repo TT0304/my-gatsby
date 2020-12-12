@@ -1,7 +1,11 @@
 ---
 title: "How to Get the Start and End Date of a Given Week Number in Google Sheets"
 date: "2020-04-20"
-featuredImage: "estee-janssens-zni0zgb3bkQ-unsplash.jpg"
+titledImage:
+  {
+    path: "planner.jpg",
+    credit: '<span>Photo by <a href="https://unsplash.com/@esteejanssens?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Estée Janssens</a> on <a href="https://unsplash.com/s/photos/planner?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
+  }
 category: "data analysis"
 description: "You are given a week number, and you need to find the start and end date of that week in order to compare metrics between weeks. Click to see how to get around this non-trivial challenge."
 tags: ["spreadsheet", "google sheets"]

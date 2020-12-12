@@ -15,7 +15,11 @@ export default function Layout({
   socialImg,
   headerPosition,
 }) {
-  const mainClass = width === "fixed" ? "container" : "none"
+  // const mainClass = width === "fixed" ? "container" : "none"
+  const mainClass = ["main"]
+  if (width === "fixed") {
+    mainClass.push("container")
+  }
   return (
     <div
       id={pageType}
@@ -27,7 +31,7 @@ export default function Layout({
       <Seo title={title} description={description} socialImg={socialImg} />
       {/* {pageType === "page" ? <Header position={headerPosition} /> : null} */}
       <Header position={headerPosition} />
-      <main className={`main container`} width={width}>
+      <main className={mainClass.join(" ")} width={width}>
         {children}
       </main>
       <Letswork />

@@ -1,22 +1,26 @@
 ---
 title: "How to Make Python 3 the Default in MacOS"
 date: "2020-09-03"
-featuredImage: "python-programming.jpg"
+titledImage:
+  {
+    path: "computer-screen-full-of-codes.jpg",
+    credit: '<span>Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/s/photos/programming?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
+  }
 category: "programming"
 description: "Learn how to set up Python 3 as the default on your Mac so you can make the most of it in the shortest time."
 ---
 
-There are certain processes I've been doing that I know are inefficient, but I stick with it out of laziness. 
+There are certain processes I've been doing that I know are inefficient, but I stick with it out of laziness.
 
-I'm talking about Python 3. I've been using it on and off for a few years but never set it as my default version. 
+I'm talking about Python 3. I've been using it on and off for a few years but never set it as my default version.
 
 I have multiple Python versions which I can't keep track of, and a few Python interpreters which require me to google frantically every time I run them, because I just don't use them frequently enough to remember
 
 However, with the bittersweet “departure” of Python 2, I think it's time to do it properly.
 
-Don't be fooled by the task name. Just like many things in programming, there are several ways to set default Python version, but some are more inefficient than others. 
+Don't be fooled by the task name. Just like many things in programming, there are several ways to set default Python version, but some are more inefficient than others.
 
-If you are wondering what the best method it, please read on. 
+If you are wondering what the best method it, please read on.
 
 ## Install pyenv
 
@@ -122,11 +126,11 @@ And how can we check which Python version is active?
 
 If you type the common command `which python`, you'll get a result like `/home/yourname/.pyenv/shims/python`. But wait, should we get the version number?
 
-That took me by surprise, but then I learned that from MacOS's perspective, it is the executable that is getting called to run Python. 
+That took me by surprise, but then I learned that from MacOS's perspective, it is the executable that is getting called to run Python.
 
 This is actually just a redirect link. Your Python version is not located there. To get the actual path to it, run `pyenv which python`. You will get a result like `/home/yourname/.pyenv/versions/3.8.5/bin/python`.
 
-And one more command before we part ways. 
+And one more command before we part ways.
 
 ## Useful pyenv commands
 

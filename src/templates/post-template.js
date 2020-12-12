@@ -13,12 +13,11 @@ export default ({ data }) => {
   const {
     title: postTitle,
     description: postDescription,
-    featuredImage,
+    titledImage,
   } = frontmatter
   const metaDescription =
     postDescription !== null ? postDescription : siteDescription
-  const socialImg =
-    featuredImage !== null ? featuredImage["publicURL"] : undefined
+  const socialImg = titledImage !== null ? titledImage["publicURL"] : undefined
   return (
     <Layout
       pageType="post"
@@ -39,14 +38,17 @@ export const query = graphql`
         date
         category
         description
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-              presentationWidth
+        titledImage {
+          path {
+            childImageSharp {
+              fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
+                presentationWidth
+              }
             }
+            publicURL
           }
-          publicURL
+          credit
         }
       }
       timeToRead

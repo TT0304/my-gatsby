@@ -2,10 +2,14 @@
 title: "Integrate Sass, Global Style and CSS Modules in Gatsby websites"
 date: "2020-09-09"
 category: "web development"
-featuredImage: "lego-blocks.jpg"
+titledImage:
+{
+path: "modular-origami.jpg",
+credit: '<span>Photo by <a href="https://unsplash.com/@mero_dnt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Chinh Le Duc</a> on <a href="https://unsplash.com/s/photos/block?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
+}
 description: "There's no one-size-fits all approach to styling with CSS, so why don't we combine the best from each approach?"
-
 ---
+
 Adding global styles to a Gatsby site is a piece of cake.
 
 Using CSS modules with Gatsby is painless.
@@ -20,7 +24,7 @@ I think no matter what CSS practices you adopt, you're not going to get away wit
 
 CSS modules are not a must, but once you've adopted them you'll be really glad about it. How do you feel when you can write CSS like you normally do without having to rack you brain over which unique class names to dozens of comparable elements?
 
-Last but not least, Sass may come in handy when your site grows big enough that  writing CSS becomes too painful. That's a problem that I would love to have, and so I enlist the help of Sass.
+Last but not least, Sass may come in handy when your site grows big enough that writing CSS becomes too painful. That's a problem that I would love to have, and so I enlist the help of Sass.
 
 ## Set up a demo
 
@@ -30,22 +34,23 @@ In the terminal, navigate to the parent directory where you want to store your p
 gatsby new sass-integration https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-This will create a new folder named `sass-integration` inside the current directory. 
+This will create a new folder named `sass-integration` inside the current directory.
 
 Navigate to the `sass-integration` folder. If you have installed Visual Studio code , run `code .` to open this folder in this text editor.
 
 ## Use component-scoped CSS
+
 Luckily, Gatsby works out of the box with CSS Modules because it was built by kind folks before us who got enough with class name collision.
 
-First, create a new directory called `components` at the root of your project. Inside it, create a new `Container` component and import a CSS module. 
+First, create a new directory called `components` at the root of your project. Inside it, create a new `Container` component and import a CSS module.
 
 ```jsx
 // src/components/container.js
-import React from "react"
-import containerStyles from "./container.module.scss"
+import React from "react";
+import containerStyles from "./container.module.scss";
 
 export default function Container({ children }) {
-return <div className={containerStyles.container}>{children}</div>
+  return <div className={containerStyles.container}>{children}</div>;
 }
 ```
 
@@ -88,25 +93,25 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
-      resolve: 'gatsby-plugin-sass',
+      resolve: "gatsby-plugin-sass",
       options: {
-        implementation: require('sass'),
-        data: `@use "src/styles/variables" as var;`
-      }
-    }
+        implementation: require("sass"),
+        data: `@use "src/styles/variables" as var;`,
+      },
+    },
   ],
-}
+};
 ```
 
 By default, `gatsby-plugin-sass` uses the node implementation of Sass (`node-sass`). The module works fine, except that it doesn't support loading built-in Sass modules with `@use` rule, and we are going to use that in our Sass file later on.
 
-In Sass, the `@use` rule is used to load other Sass stylesheets. You can use `@import` in its stead, just like in CSS.  However, the `@import` rule is heading towards its end in the next few years and even the Sass team warn against using it.
+In Sass, the `@use` rule is used to load other Sass stylesheets. You can use `@import` in its stead, just like in CSS. However, the `@import` rule is heading towards its end in the next few years and even the Sass team warn against using it.
 
 From my experience, it's always worth spending a little bit more time to make sure that your site is still running strong with no deprecation warning after a few years.
 
 That aside, what does the `data` option do? It will pass the `@use` rule into every SCSS file, and at the same time it namespace the `variables` module as just `var`.
 
-For example, you have a Sass file that defines all the global variables like font family, site width, font color, background color etc. 
+For example, you have a Sass file that defines all the global variables like font family, site width, font color, background color etc.
 
 You are going to load them in all the stylesheets to ensure design consistency. But who wants to remember write `@use "src/styles/variables` in dozens of stylesheets?
 
@@ -143,8 +148,8 @@ We've technically integrated into Gatsby, but how can we tell if it works or not
 Create a new file named `about-sass.js` under `src/pages` directory. In this file, import and render the Container component like below:
 
 ```jsx
-import React from "react"
-import Container from "../components/container"
+import React from "react";
+import Container from "../components/container";
 
 export default function About() {
   return (
@@ -152,7 +157,7 @@ export default function About() {
       <h1>About Sass</h1>
       <p>Sass is cool, but integrating it into Gatsby is not</p>
     </Container>
-  )
+  );
 }
 ```
 
@@ -172,7 +177,7 @@ Create a new stylesheet `src/styles/global.scss` and import it into the `gatsby-
 
 ```jsx
 // gatsby-browser.js
-import "./src/styles/global.scss"
+import "./src/styles/global.scss";
 ```
 
 Inside the global stylesheet, specify the background color property for the body element:

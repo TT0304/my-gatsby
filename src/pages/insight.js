@@ -10,7 +10,6 @@ export default ({ data }) => {
   const authorName = author["name"]
   const { allMdx } = data
   const allPosts = [...allMdx.edges.map(e => e.node)]
-  console.log(allPosts)
   return (
     <Layout title={`${blogTitle} | ${authorName}`}>
       <div className={`${styles.articleList} lg-col-10 mx-auto pb4`}>
@@ -18,12 +17,8 @@ export default ({ data }) => {
           {allPosts.map(node => {
             const { slug } = node.fields
             const { excerpt } = node
-            const {
-              featuredImage: img,
-              title,
-              description,
-              date,
-            } = node.frontmatter
+            const { titledImage, title, description, date } = node.frontmatter
+            const { path: imgPath } = titledImage
             const teaser = description !== null ? description : excerpt
             return (
               <li
@@ -41,7 +36,7 @@ export default ({ data }) => {
                 <Link to={slug}>
                   <Img
                     className={styles.img__wrapper}
-                    fluid={img.childImageSharp.fluid}
+                    fluid={imgPath.childImageSharp.fluid}
                   />
                   <div className={styles.post__text}>
                     <h2
@@ -71,11 +66,13 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
-            featuredImage {
-              childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
-                  presentationWidth
+            titledImage {
+              path {
+                childImageSharp {
+                  fluid(maxWidth: 800) {
+                    ...GatsbyImageSharpFluid
+                    presentationWidth
+                  }
                 }
               }
             }

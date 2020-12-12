@@ -1,7 +1,11 @@
 ---
 title: "Install Ruby and Ruby Gems on Mac"
 date: "2020-06-27"
-featuredImage: "red-gemstone.jpg"
+titledImage:
+  {
+    path: "ruby-red-pomegranate.jpg",
+    credit: '<span>Photo by <a href="https://unsplash.com/@nordwood?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">NordWood Themes</a> on <a href="https://unsplash.com/s/photos/pomegranate?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
+  }
 category: "programming"
 description: "Installation is usually the easiest step in mastering that language. However, some approach to installation is more effective than others. Learn the best way to install Ruby so you can get up and running with it in the shortest time possible."
 ---
@@ -42,7 +46,7 @@ That's an easy way out, but I don't recommend it since you'll lose track of how 
 
 To save your hairs, please follow this sequence of steps that I have personally tested to work beautifully.
 
-Since you are here for Ruby and Gems, I assume that you have installed Homebrew, the software package management  for MacOS operating system.
+Since you are here for Ruby and Gems, I assume that you have installed Homebrew, the software package management for MacOS operating system.
 
 Whoever thought that the mere installation of a new language on a Mac could be so cumbersome?
 
@@ -65,7 +69,7 @@ In case you need a recap:
 
 To check which ruby you are using, run this command `which ruby`. If you get an output that is `/usr/bin/ruby`, that means you are using the outdated Ruby preinstalled on Mac.
 
- We can use rvm to install Ruby into our home directory
+We can use rvm to install Ruby into our home directory
 
 To install the latest versions of Ruby, run `rvm install ruby`
 
@@ -79,7 +83,7 @@ You can check the gem environemnt settings with `gem env`
 
 Now, you can install any Ruby package with the command `gem install [name of the package]`.
 
-After finishing the installation, you can check where a particular gem is installed with`gem which`. 
+After finishing the installation, you can check where a particular gem is installed with`gem which`.
 
 For example, when I run `gem which twurl`, I get the following output:
 
