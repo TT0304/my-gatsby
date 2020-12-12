@@ -1,12 +1,12 @@
 ---
 title: "Integrate Sass, Global Style and CSS Modules in Gatsby websites"
 date: "2020-09-09"
-category: "web development"
 titledImage:
-{
-path: "modular-origami.jpg",
-credit: '<span>Photo by <a href="https://unsplash.com/@mero_dnt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Chinh Le Duc</a> on <a href="https://unsplash.com/s/photos/block?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
-}
+  {
+    path: "modular-origami.jpg",
+    credit: '<span>Photo by <a href="https://unsplash.com/@mero_dnt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Chinh Le Duc</a> on <a href="https://unsplash.com/s/photos/block?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
+  }
+category: "web development"
 description: "There's no one-size-fits all approach to styling with CSS, so why don't we combine the best from each approach?"
 ---
 
@@ -46,11 +46,11 @@ First, create a new directory called `components` at the root of your project. I
 
 ```jsx
 // src/components/container.js
-import React from "react";
-import containerStyles from "./container.module.scss";
+import React from "react"
+import containerStyles from "./container.module.scss"
 
 export default function Container({ children }) {
-  return <div className={containerStyles.container}>{children}</div>;
+  return <div className={containerStyles.container}>{children}</div>
 }
 ```
 
@@ -100,7 +100,7 @@ module.exports = {
       },
     },
   ],
-};
+}
 ```
 
 By default, `gatsby-plugin-sass` uses the node implementation of Sass (`node-sass`). The module works fine, except that it doesn't support loading built-in Sass modules with `@use` rule, and we are going to use that in our Sass file later on.
@@ -148,8 +148,8 @@ We've technically integrated into Gatsby, but how can we tell if it works or not
 Create a new file named `about-sass.js` under `src/pages` directory. In this file, import and render the Container component like below:
 
 ```jsx
-import React from "react";
-import Container from "../components/container";
+import React from "react"
+import Container from "../components/container"
 
 export default function About() {
   return (
@@ -157,7 +157,7 @@ export default function About() {
       <h1>About Sass</h1>
       <p>Sass is cool, but integrating it into Gatsby is not</p>
     </Container>
-  );
+  )
 }
 ```
 
@@ -177,7 +177,7 @@ Create a new stylesheet `src/styles/global.scss` and import it into the `gatsby-
 
 ```jsx
 // gatsby-browser.js
-import "./src/styles/global.scss";
+import "./src/styles/global.scss"
 ```
 
 Inside the global stylesheet, specify the background color property for the body element:

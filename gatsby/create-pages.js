@@ -5,7 +5,7 @@ const createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const result = await graphql(`
     {
-      allMdx {
+      allMdx(filter: { fileAbsolutePath: { regex: "/insight/.*/" } }) {
         edges {
           node {
             fields {

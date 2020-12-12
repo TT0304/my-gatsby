@@ -21,7 +21,12 @@ export default function Hero({ title, image, date, topic }) {
                 }}
                 placeholderStyle={{ paddingBottom: "0" }}
               />
-              {credit && <span dangerouslySetInnerHTML={{ __html: credit }} />}
+              {credit && (
+                <div
+                  className={`small link_external ${styles.image__credit}`}
+                  dangerouslySetInnerHTML={{ __html: credit }}
+                />
+              )}
             </>
           )}
         </div>

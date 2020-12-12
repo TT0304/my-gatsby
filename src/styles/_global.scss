@@ -6,6 +6,14 @@
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   --font-sans-serif: "Raleway", var(--font-platform);
+  --lighten5: hsla(0, 0%, 100%, 0.05);
+  --lighten10: hsla(0, 0%, 100%, 0.1);
+  --lighten25: hsla(0, 0%, 100%, 0.25);
+  --lighten50: hsla(0, 0%, 100%, 0.25);
+  --darken5: hsla(0, 0%, 0%, 0.05);
+  --darken10: hsla(0, 0%, 0%, 0.1);
+  --darken25: hsla(0, 0%, 0%, 0.25);
+  --darken50: hsla(0, 0%, 0%, 0.5);
   --space0: 0;
   --space-quarter: 0.25rem;
   --space-half: 0.5rem;
@@ -727,6 +735,11 @@ h5.huge,
 .inline-block {
   display: inline-block;
 }
+
+/* ==[ Border ]== */
+.understroke {
+  box-shadow: inset 0 -0.0875rem 0 var(--color-black);
+}
 /* Flexbox
 ========================================================================== */
 .flex {
@@ -986,10 +999,8 @@ a.hover:before {
   opacity: 1;
   background: var.$black-olive;
 }
-.postContent a {
-  font-family: var.$font-condensed;
-  border-bottom: 1px var.$border-style var.$black-olive;
-  font-weight: 500;
+.post-content a {
+  box-shadow: inset 0 -0.0875rem 0 var(--darken50);
 }
 
 @include var.media(">medWidth") {

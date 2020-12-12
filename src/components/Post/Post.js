@@ -7,7 +7,7 @@ export default function Post({ post }) {
   const { body, timeToRead } = post
   const { title, date, titledImage, category } = post.frontmatter
   return (
-    <article className={styles.post}>
+    <article className={`post-content ${styles.post}`}>
       <Hero title={title} image={titledImage} date={date} topic={category} />
       <Body body={body} readingTime={timeToRead} />
     </article>
