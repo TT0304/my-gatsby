@@ -4,21 +4,31 @@ import styles from "./Body.module.scss"
 
 export default function Body({ body, readingTime }) {
   return (
-    <div className={styles.postContent}>
-      <div className={styles.postContent__wrapper}>
-        <div className={styles.postContent__container}>
-          <div className={styles.postContent__sidebar}>
-            <div className={styles.readingTime}>
-              {`${readingTime} min remaining`}
+    <div className={styles.grid}>
+      <section className={styles.richText}>
+        <div className={`mx-auto ${styles.richText__wrapper}`}>
+          <div className={styles.richText__container}>
+            <div className={styles.richText__sidebar}>
+              <div className={styles.readingTime}>
+                {`${readingTime} min remaining`}
+              </div>
+            </div>
+            <div
+              className={`${styles.postContent__content} postContent line-height-5`}
+            >
+              <MDXRenderer>{body}</MDXRenderer>
             </div>
           </div>
-          <div
-            className={`${styles.postContent__content} postContent line-height-5`}
-          >
-            <MDXRenderer>{body}</MDXRenderer>
-          </div>
         </div>
-      </div>
+      </section>
+      <section
+        className={`monospace center lg-pt2 md-pt1 ${styles.articleFooter}`}
+      >
+        Buy me a{" "}
+        <a href="https://ko-fi.com/bytrangle" target="_blank" rel="external">
+          coffee
+        </a>
+      </section>
     </div>
   )
 }

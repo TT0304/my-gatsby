@@ -10,6 +10,7 @@ export default function Post({ post }) {
     <article className={`post-content ${styles.post}`}>
       <Hero title={title} image={titledImage} date={date} topic={category} />
       <Body body={body} readingTime={timeToRead} />
+      <div className={`monospace ${styles.post__cta}`}></div>
     </article>
   )
 }

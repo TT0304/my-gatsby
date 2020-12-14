@@ -1,4 +1,9 @@
-.postContent {
+.grid {
+  section {
+    margin-bottom: 40px;
+  }
+}
+.richText {
   padding-top: 60px;
   @include var.media("screen", ">xlWidth") {
     padding-top: 130px;
@@ -19,8 +24,6 @@
   }
   &__wrapper {
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     @include var.media("screen", ">xlWidth") {
       width: 93.75%;
     }
@@ -32,11 +35,9 @@
     justify-content: flex-start;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 60px;
     width: 87.5%;
     @include var.media("screen", ">xlWidth") {
       width: 73.33333%;
-      padding-bottom: 90px;
     }
     @include var.media("screen", ">medWidth") {
       flex-direction: row;
@@ -66,4 +67,18 @@
   border-top-width: 2px;
   border-color: var.$black;
   padding-top: 15px;
+}
+.articleFooter {
+  position: relative;
+  &::before {
+    content: "\0020";
+    display: block;
+    position: absolute;
+    width: 100px;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    height: 0;
+    border-top: 1px dotted var(--darken50);
+  }
 }
