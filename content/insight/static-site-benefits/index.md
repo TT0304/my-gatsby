@@ -13,6 +13,8 @@ target: "non-programmers"
 tags: ["wordpress", "static site generator", "gatsby"]
 ---
 
+import CaptionedImage from "../../../src/components/CaptionedImage"
+
 If you've been hearing people rave about static sites, and wonder if it would do you any good, this is the article for you.
 
 A few weeks ago, I still had no clue what static site was, and it was frustrating because everyone seemed to get it, except me.
@@ -31,7 +33,14 @@ When you hear the term “server”, it can mean either the hardware, the softwa
 
 On the hardware side, a web server is a specialized computer that stores web server software and a website's component files. It is much more powerful, and larger in size than the standard consumer computer.
 
-![a row of supercomputers which function servers](./server.jpg "Photo by [Science in HD](https://unsplash.com/@scienceinhd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/server?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)")
+<!-- ![a row of supercomputers which function servers](./server.jpg "Photo by [Ross Stone](https://unsplash.com/@rs2photography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)") -->
+
+<!-- <figcaption>
+
+</figcaption> -->
+
+<CaptionedImage path="server.jpg" alt="test" caption='<span>Photo by <a href="https://unsplash.com/@scienceinhd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Science in HD</a> on <a href="https://unsplash.com/s/photos/server?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+</span>' />
 
 When you visit a web page, you are essentially requesting data from this gigantic computer. There was a point in the history of internet when companies have to manage these huge machines on premise. Luckily, with the arrival of hosting services, we don't have to do that, so not many people have seen a server in real life, let alone know what a server is.
 

@@ -69,6 +69,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -78,8 +79,8 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
-              markdownCaptions: true,
               showCaptions: ["title"],
+              // markdownCaptions: true,
             },
           },
           {
@@ -106,13 +107,6 @@ module.exports = {
     //         resolve: `gatsby-remark-images`,
     //         options: {
     //           maxWidth: 1200,
-    //         },
-    //       },
-    //       {
-    //         resolve: `gatsby-remark-copy-linked-files`,
-    //         options: {
-    //           destinationDir: `${__dirname}/src/gifs`,
-    //           ignoreFileExtensions: [`png`, `jpq`, `jpeg`],
     //         },
     //       },
     //     ],

@@ -1,0 +1,33 @@
+.imageBlock {
+  margin-top: 40px;
+  @include var.media(">medWidth") {
+    margin-bottom: 40px;
+  }
+}
+.figure {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.image {
+  @include var.media(">lgWidth") {
+    float: left;
+    width: 79.48%;
+  }
+}
+.caption {
+  padding-top: 8px;
+  @include var.media(">medWidth") {
+    font-size: 13px;
+  }
+  @include var.media(">lgWidth") {
+    border-bottom: 0;
+    border-style: solid;
+    border-color: var(--darken25);
+    border-width: 1px 0 0;
+    float: right;
+    width: 18.18%;
+  }
+}

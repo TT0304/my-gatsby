@@ -14,7 +14,7 @@ export default function Body({ body, readingTime }) {
               </div>
             </div>
             <div
-              className={`${styles.postContent__content} postContent line-height-5`}
+              className={`${styles.richText__content} article__body line-height-5`}
             >
               <MDXRenderer>{body}</MDXRenderer>
             </div>
@@ -25,7 +25,11 @@ export default function Body({ body, readingTime }) {
         className={`monospace center lg-pt2 md-pt1 ${styles.articleFooter}`}
       >
         Buy me a{" "}
-        <a href="https://ko-fi.com/bytrangle" target="_blank" rel="external">
+        <a
+          href="https://ko-fi.com/bytrangle"
+          target="_blank"
+          rel="noopener noreferrer external"
+        >
           coffee
         </a>
       </section>
