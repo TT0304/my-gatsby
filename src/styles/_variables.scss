@@ -1,3 +1,4 @@
+@import "partials/functions";
 $border-style: dotted;
 $white: white;
 $black: black;
@@ -43,7 +44,6 @@ $width9: 75%;
 $width10: 83.33333%;
 $width11: 91.66667%;
 $width12: 100%;
-$serif: "IBM Plex Serif", Georgia, serif;
 
 /* Store breakpoints */
 $mediaXL: 1200px;
@@ -51,6 +51,11 @@ $mediaLarge: 992px;
 $mediaMedium: 768px;
 $mediaSmall: 576px;
 $mediaExtraSmall: 480px;
+
+/* ------------------------------------ Content Wrapper ----------------------------------- */
+$wrapper-px: 12px;
+$wrapper-max-width: (rem-to-px(6) + $mediaXL);
+$serif: "IBM Plex Serif", Georgia, serif;
 
 @function translate-media-condition($c) {
   $condMap: (

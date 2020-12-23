@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+  max-width: 1152px;
+  margin: 0 auto;
+  position: relative;
+  padding: var.$wrapper-px;
+}
+.wrapper-no-p {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1128px;
+}
