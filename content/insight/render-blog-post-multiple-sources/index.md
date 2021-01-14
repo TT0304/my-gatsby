@@ -1,7 +1,7 @@
 ---
 title: "How to Render Blog Posts from Multiple Sources in Gatsby"
 date: "2020-04-10"
-titledImage:
+featuredImage:
   {
     path: "drawer.jpg",
     credit: '<span>Photo by <a href="https://unsplash.com/@jankolar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jan Antonin Kolar</a> on <a href="https://unsplash.com/s/photos/drawer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
@@ -30,7 +30,7 @@ Let's get started. The whole process can be divided into three steps:
 // ...
 exports.createPages = async ({ graphql, actions }) => {
   // Extract an action called createPage
-  const { createPage } = actions;
+  const { createPage } = actions
   // this action returns a promise
   // query a list of all Markdown slugs in this site
   const result = await graphql(`
@@ -58,21 +58,21 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `);
+  `)
   const arr = [
-    ...result.data.allMarkdownRemark.edges.map((e) => e.node),
-    ...result.data.allWordpressPost.edges.map((e) => e.node),
-  ];
-  arr.forEach((el) => {
+    ...result.data.allMarkdownRemark.edges.map(e => e.node),
+    ...result.data.allWordpressPost.edges.map(e => e.node),
+  ]
+  arr.forEach(el => {
     createPage({
       path: el.fields.link,
       component: path.resolve("./src/templates/post.js"),
       context: {
         id: el.id,
       },
-    });
-  });
-};
+    })
+  })
+}
 ```
 
 There is not much difference from the usual programmatic creation of pages from data, except that I copy the `node` field of the `result` object to a new array. Then I loop through each item and create a page for it.
@@ -90,8 +90,8 @@ result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     context: {
       id: node.id,
     },
-  });
-});
+  })
+})
 result.data.allWordpressPost.edges.forEach(({ node }) => {
   createPage({
     // `path` will be the url for the page
@@ -103,8 +103,8 @@ result.data.allWordpressPost.edges.forEach(({ node }) => {
     context: {
       id: node.id,
     },
-  });
-});
+  })
+})
 ```
 
 Your query may be different than mine, but the most important thing to remember is the `createPage` function and its parameters:
@@ -116,11 +116,11 @@ Your query may be different than mine, but the most important thing to remember 
 Next, create a new file named `post.js` inside `src/templates` directory. Inside this file, we'll query data from all the sources that we want, and then render them.
 
 ```jsx
-import React from "react";
-import { graphql } from "gatsby";
-import Layout from "../components/layout";
-import Title from "../components/title";
-import styles from "./post.module.scss";
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/layout"
+import Title from "../components/title"
+import styles from "./post.module.scss"
 
 export const query = graphql`
   query($id: String!) {
@@ -139,7 +139,7 @@ export const query = graphql`
       content
     }
   }
-`;
+`
 ```
 
 2. Query the relevant data inside the template
@@ -164,7 +164,7 @@ export const query = graphql`
       content
     }
   }
-`;
+`
 ```
 
 3. Render the data
@@ -173,7 +173,7 @@ This step is also an easy ride. Because `wordpressPost` and `markdownRemark` hav
 
 ```jsx
 export default ({ data }) => {
-  const { markdownRemark, wordpressPost } = data;
+  const { markdownRemark, wordpressPost } = data
   return (
     <Layout>
       {wordpressPost && (
@@ -221,8 +221,8 @@ export default ({ data }) => {
         </div>
       )}
     </Layout>
-  );
-};
+  )
+}
 ```
 
 Here is blog posts rendered from a Markdown file, and a Wordpress post, respectively. I have issues with displaying random Unsplash images for my Markdown files, but other than that, both posts look the same, and that's what we are looking for.

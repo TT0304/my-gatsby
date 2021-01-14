@@ -2,8 +2,7 @@
 title: "All about Redirect with Gatsby"
 description: "Gatsby is cool, Gatsby is perfect. But how easy it is to set up redirect in Gatsby, a common requirement for modern web apps? Let's find out."
 date: "2020-11-12"
-featuredImage: "direction-signage.jpg"
-titledImage:
+featuredImage:
   {
     path: "direction-signage.jpg",
     credit: '<span>Photo by <a href="https://unsplash.com/@soymeraki?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Javier Allegue Barros</a> on <a href="https://unsplash.com/s/photos/direction?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',

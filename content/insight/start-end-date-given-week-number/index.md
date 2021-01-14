@@ -1,7 +1,7 @@
 ---
 title: "How to Get the Start and End Date of a Given Week Number in Google Sheets"
 date: "2020-04-20"
-titledImage:
+featuredImage:
   {
     path: "planner.jpg",
     credit: '<span>Photo by <a href="https://unsplash.com/@esteejanssens?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Estée Janssens</a> on <a href="https://unsplash.com/s/photos/planner?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',

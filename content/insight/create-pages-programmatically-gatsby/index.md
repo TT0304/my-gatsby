@@ -1,7 +1,7 @@
 ---
 title: "How to Create Pages Programmatically in Gatsby"
 date: "2020-04-08"
-titledImage:
+featuredImage:
   {
     path: "row-of-hardcover-books.jpg",
     credit: '<span>Photo by <a href="https://unsplash.com/@fragilejames?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James</a> on <a href="https://unsplash.com/s/photos/book-shelf?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
@@ -35,15 +35,15 @@ To understand how that works, open the `gatsby-node.js` file and paste the follo
 
 ```js
 // gatsby.node.js
-const { createFilePath } = require("gatsby-source-filesystem");
+const { createFilePath } = require("gatsby-source-filesystem")
 exports.onCreateNode = ({ node, getNode }) => {
   // if the node type is MarkdownRemark, create the slug.
   // basePath is the folder where the Markdown files are stored
   if (node.internal.type === "MarkdownRemark") {
-    const slug = createFilePath({ node, getNode, basePath: "markdown" });
-    console.log(slug);
+    const slug = createFilePath({ node, getNode, basePath: "markdown" })
+    console.log(slug)
   }
-};
+}
 ```
 
 Then rerun the server and you should see something like this in the console.

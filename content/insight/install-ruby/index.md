@@ -1,7 +1,7 @@
 ---
 title: "Install Ruby and Ruby Gems on Mac"
 date: "2020-06-27"
-titledImage:
+featuredImage:
   {
     path: "ruby-red-pomegranate.jpg",
     credit: '<span>Photo by <a href="https://unsplash.com/@nordwood?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">NordWood Themes</a> on <a href="https://unsplash.com/s/photos/pomegranate?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
