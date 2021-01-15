@@ -2,9 +2,9 @@ import React from "react"
 import Img from "gatsby-image"
 import styles from "./Hero.module.scss"
 
-export default function Hero({ title, image, date, topic }) {
+export default function Hero({ title, image, publishedAt, topic }) {
   const { path: imgPath, credit } = image
-  console.log(credit)
+  const { relativeDate, isoDate } = publishedAt
   return (
     <div className={styles.articleHero}>
       <div className={styles.articleHero__container}>
@@ -39,9 +39,11 @@ export default function Hero({ title, image, date, topic }) {
           >
             {title}
           </h1>
-          <p
-            className={`${styles.articleHero__date} line-height-5 medium`}
-          >{`Published on ${date}`}</p>
+          {relativeDate && (
+            <p
+              className={`${styles.articleHero__date} line-height-5 medium`}
+            >{`Published on ${relativeDate}`}</p>
+          )}
         </div>
       </div>
     </div>
