@@ -4,7 +4,7 @@ date: "2020-01-20"
 featuredImage: {
 	path: "green-leaf-floating-on-water.jpg",
 	credit: '<span>Photo by <a href="https://unsplash.com/@speterlewis?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Peter Lewis</a> on <a href="https://unsplash.com/s/photos/float?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
-},
+}
 category: "web design"
 description: "Even with the rise of flex box and grid, the CSS float property is not going away anytime soon if used correctly. Learn how to make the best of it to create stunning layout."
 tags: ["css"]
