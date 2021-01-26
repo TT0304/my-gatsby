@@ -17,8 +17,9 @@ export default ({ data }) => {
           {allPosts.map(node => {
             const { slug } = node.fields
             const { excerpt } = node
-            const { titledImage, title, description, date } = node.frontmatter
-            const { path: imgPath } = titledImage
+            // const { featuredImage, title, description, date } = node.frontmatter
+            // const { path: imgPath } = featuredImage
+            const { title, description, date } = node.frontmatter
             const teaser = description !== null ? description : excerpt
             return (
               <li
@@ -34,10 +35,10 @@ export default ({ data }) => {
                   {date}
                 </small>
                 <Link to={slug}>
-                  <Img
+                  {/* <Img
                     className={styles.img__wrapper}
                     fluid={imgPath.childImageSharp.fluid}
-                  />
+                  /> */}
                   <div className={styles.post__text}>
                     <h2
                       className={`${styles.post__title} display medium line-height-3 inline`}
@@ -56,6 +57,41 @@ export default ({ data }) => {
     </Layout>
   )
 }
+// export const pageQuery = graphql`
+//   query {
+//     allMdx(
+//       filter: { fileAbsolutePath: { regex: "/insight/" } }
+//       sort: { fields: [frontmatter___date], order: DESC }
+//     ) {
+//       edges {
+//         node {
+//           id
+//           frontmatter {
+//             featuredImage {
+//               path {
+//                 childImageSharp {
+//                   fluid(maxWidth: 800) {
+//                     ...GatsbyImageSharpFluid
+//                     presentationWidth
+//                   }
+//                 }
+//               }
+//             }
+//             title
+//             date(formatString: "MMM.DD.YYYY")
+//             category
+//             description
+//           }
+//           fields {
+//             slug
+//           }
+//           excerpt
+//         }
+//       }
+//     }
+//   }
+// `
+
 export const pageQuery = graphql`
   query {
     allMdx(
@@ -66,16 +102,6 @@ export const pageQuery = graphql`
         node {
           id
           frontmatter {
-            titledImage {
-              path {
-                childImageSharp {
-                  fluid(maxWidth: 800) {
-                    ...GatsbyImageSharpFluid
-                    presentationWidth
-                  }
-                }
-              }
-            }
             title
             date(formatString: "MMM.DD.YYYY")
             category
