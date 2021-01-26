@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { defineCustomElements as deckDeckGoHighlightElement } from "@deckdeckgo/highlight-code/dist/loader"
 import Layout from "../components/Layout"
 import Post from "../components/Post"
+import PostWithoutFeaturedImage from "../components/PostWithoutFeaturedImage"
 import { useSiteMetadata } from "../hooks"
 
 deckDeckGoHighlightElement()
@@ -13,11 +14,13 @@ export default ({ data }) => {
   const {
     title: postTitle,
     description: postDescription,
-    titledImage,
+    featuredImage,
   } = frontmatter
   const metaDescription =
     postDescription !== null ? postDescription : siteDescription
-  const socialImg = titledImage !== null ? titledImage["publicURL"] : undefined
+  const socialImg = featuredImage.path
+    ? featuredImage.path.publicURL
+    : undefined
   return (
     <Layout
       pageType="post"
@@ -25,20 +28,26 @@ export default ({ data }) => {
       description={metaDescription}
       socialImg={socialImg}
     >
-      <Post post={data.mdx} />
+      {featuredImage.path ? (
+        <Post post={data.mdx} />
+      ) : (
+        <PostWithoutFeaturedImage post={data.mdx} />
+      )}
     </Layout>
   )
 }
+
 export const query = graphql`
   query($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
       body
       frontmatter {
         title
-        date
+        isoDate: date(formatString: "YYYY-MMM-DD")
+        updatedAt
         category
         description
-        titledImage {
+        featuredImage {
           path {
             childImageSharp {
               fluid(maxWidth: 800) {

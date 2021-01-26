@@ -4,7 +4,7 @@ import styles from "./Hero.module.scss"
 
 export default function Hero({ title, image, publishedAt, topic }) {
   const { path: imgPath, credit } = image
-  const { relativeDate, isoDate } = publishedAt
+  const { isoDate } = publishedAt
   return (
     <div className={styles.articleHero}>
       <div className={styles.articleHero__container}>
@@ -39,10 +39,12 @@ export default function Hero({ title, image, publishedAt, topic }) {
           >
             {title}
           </h1>
-          {relativeDate && (
-            <p
+          {isoDate && (
+            <span
               className={`${styles.articleHero__date} line-height-5 medium`}
-            >{`Published on ${relativeDate}`}</p>
+            >
+              Published on <time dateTime={isoDate}>{isoDate}</time>
+            </span>
           )}
         </div>
       </div>
