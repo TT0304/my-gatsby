@@ -16,11 +16,10 @@ export default ({ data }) => {
     description: postDescription,
     featuredImage,
   } = frontmatter
+  const hasFeaturedImage = featuredImage && featuredImage.path
   const metaDescription =
     postDescription !== null ? postDescription : siteDescription
-  const socialImg = featuredImage.path
-    ? featuredImage.path.publicURL
-    : undefined
+  const socialImg = hasFeaturedImage ? featuredImage.path.publicURL : undefined
   return (
     <Layout
       pageType="post"
@@ -28,7 +27,7 @@ export default ({ data }) => {
       description={metaDescription}
       socialImg={socialImg}
     >
-      {featuredImage.path ? (
+      {hasFeaturedImage ? (
         <Post post={data.mdx} />
       ) : (
         <PostWithoutFeaturedImage post={data.mdx} />
