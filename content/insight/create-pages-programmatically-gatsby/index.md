@@ -2,10 +2,8 @@
 title: "How to Create Pages Programmatically in Gatsby"
 date: 2020-04-08
 featuredImage:
-  {
-    path: "row-of-hardcover-books.jpg",
-    credit: '<span>Photo by <a href="https://unsplash.com/@fragilejames?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James</a> on <a href="https://unsplash.com/s/photos/book-shelf?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
-  }
+  path: "row-of-hardcover-books.jpg"
+  credit: '<span>Photo by <a href="https://unsplash.com/@fragilejames?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">James</a> on <a href="https://unsplash.com/s/photos/book-shelf?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
 tags: ["gatsby.js", "graphql"]
 category: "web development"
 description: "Blog posts usually follow the same format. Learn how to create them from a template programmatically so that you only have to do it once and enjoy the fruit of your coding"

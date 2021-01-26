@@ -2,10 +2,8 @@
 title: "Integrate Sass, Global Style and CSS Modules in Gatsby websites"
 date: 2020-09-09
 featuredImage:
-  {
-    path: "modular-origami.jpg",
-    credit: '<span>Photo by <a href="https://unsplash.com/@mero_dnt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Chinh Le Duc</a> on <a href="https://unsplash.com/s/photos/block?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
-  }
+  path: "modular-origami.jpg"
+  credit: '<span>Photo by <a href="https://unsplash.com/@mero_dnt?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Chinh Le Duc</a> on <a href="https://unsplash.com/s/photos/block?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
 category: "web development"
 description: "There's no one-size-fits all approach to styling with CSS, so why don't we combine the best from each approach?"
 ---

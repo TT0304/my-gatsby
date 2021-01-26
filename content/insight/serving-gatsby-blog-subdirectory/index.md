@@ -3,10 +3,8 @@ title: "How to Serve Gatsby Blog Posts at a Subdirectory"
 date: 2020-04-09
 category: "web development"
 featuredImage:
-  {
-    path: "abstract-light-background.jpg",
-    credit: '<span>Photo by <a href="https://unsplash.com/@christopher__burns?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Christopher Burns</a> on <a href="https://unsplash.com/s/photos/abstract?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
-  }
+  path: "abstract-light-background.jpg"
+  credit: '<span>Photo by <a href="https://unsplash.com/@christopher__burns?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Christopher Burns</a> on <a href="https://unsplash.com/s/photos/abstract?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
 description: "Learn how to programmatically serve Gatsby blog posts at a subdirectory so that whenever you want to change the subdirectory name, you only need to change it once."
 ---
 

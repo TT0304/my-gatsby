@@ -2,10 +2,8 @@
 title: "How to Make Python 3 the Default in MacOS"
 date: 2020-09-03
 featuredImage:
-  {
-    path: "computer-screen-full-of-codes.jpg",
-    credit: '<span>Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/s/photos/programming?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
-  }
+  path: "computer-screen-full-of-codes.jpg"
+  credit: '<span>Photo by <a href="https://unsplash.com/@markusspiske?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Spiske</a> on <a href="https://unsplash.com/s/photos/programming?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
 category: "programming"
 description: "Learn how to set up Python 3 as the default on your Mac so you can make the most of it in the shortest time."
 ---

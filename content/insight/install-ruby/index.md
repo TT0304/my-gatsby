@@ -2,10 +2,8 @@
 title: "Install Ruby and Ruby Gems on Mac"
 date: 2020-06-27
 featuredImage:
-  {
-    path: "ruby-red-pomegranate.jpg",
-    credit: '<span>Photo by <a href="https://unsplash.com/@nordwood?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">NordWood Themes</a> on <a href="https://unsplash.com/s/photos/pomegranate?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
-  }
+  path: "ruby-red-pomegranate.jpg"
+  credit: '<span>Photo by <a href="https://unsplash.com/@nordwood?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">NordWood Themes</a> on <a href="https://unsplash.com/s/photos/pomegranate?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
 category: "programming"
 description: "Installation is usually the easiest step in mastering that language. However, some approach to installation is more effective than others. Learn the best way to install Ruby so you can get up and running with it in the shortest time possible."
 ---

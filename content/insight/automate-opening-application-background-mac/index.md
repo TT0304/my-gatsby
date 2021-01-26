@@ -3,10 +3,8 @@ title: "How to Automate Opening Applications in the Background on Mac"
 date: 2020-10-24
 category: "productivity"
 featuredImage:
-  {
-    path: "grass-background.jpg",
-    credit: '<span>Photo by <a href="https://unsplash.com/@juniperphoton?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">JuniperPhoton</a> on <a href="https://unsplash.com/s/photos/grass?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
-  }
+	path: "grass-background.jpg"
+    credit: '<span>Photo by <a href="https://unsplash.com/@juniperphoton?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">JuniperPhoton</a> on <a href="https://unsplash.com/s/photos/grass?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
 description: "One-click automation workflow to open an app in the background, and go back to work on what matters most. No coding knowledge required."
 tags: ["automation", "applescript"]
 ---

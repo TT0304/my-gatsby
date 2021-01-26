@@ -2,10 +2,8 @@
 title: "How to Render Blog Posts from Multiple Sources in Gatsby"
 date: 2020-04-10
 featuredImage:
-  {
-    path: "drawer.jpg",
-    credit: '<span>Photo by <a href="https://unsplash.com/@jankolar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jan Antonin Kolar</a> on <a href="https://unsplash.com/s/photos/drawer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>',
-  }
+  path: "drawer.jpg"
+  credit: '<span>Photo by <a href="https://unsplash.com/@jankolar?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Jan Antonin Kolar</a> on <a href="https://unsplash.com/s/photos/drawer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'
 category: "web development"
 tags: ["gatsby.js", "graphql"]
 description: "Gatsby prides itself in its ability to source data from anywhere, e.g. your file system, your sluggish Wordpress website, an old sql database, a headless CMS etc. But how do you merge them into one component? Learn how to do that in this hands-on tutorial."
