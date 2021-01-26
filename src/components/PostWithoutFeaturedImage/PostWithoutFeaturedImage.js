@@ -1,4 +1,5 @@
 import React from "react"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 export default function Post({ post }) {
   const { body, timeToRead, updatedDate } = post
@@ -57,7 +58,9 @@ export default function Post({ post }) {
             </div>
           </div>
         </aside>
-        <section class="post-body">{body}</section>
+        <section class="post-body">
+          <MDXRenderer>{body}</MDXRenderer>
+        </section>
         <aside class="sidebar post-sidebar post-sidebar__right"></aside>
       </div>
     </article>
