@@ -1,6 +1,6 @@
 ---
 title: "Integrate Sass, Global Style and CSS Modules in Gatsby websites"
-date: "2020-09-09"
+date: 2020-09-09
 featuredImage:
   {
     path: "modular-origami.jpg",

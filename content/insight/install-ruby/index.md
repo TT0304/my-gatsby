@@ -1,6 +1,6 @@
 ---
 title: "Install Ruby and Ruby Gems on Mac"
-date: "2020-06-27"
+date: 2020-06-27
 featuredImage:
   {
     path: "ruby-red-pomegranate.jpg",

@@ -1,6 +1,6 @@
 ---
 title: "How to Make Python 3 the Default in MacOS"
-date: "2020-09-03"
+date: 2020-09-03
 featuredImage:
   {
     path: "computer-screen-full-of-codes.jpg",

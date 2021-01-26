@@ -1,6 +1,6 @@
 ---
 title: "How to Create Pages Programmatically in Gatsby"
-date: "2020-04-08"
+date: 2020-04-08
 featuredImage:
   {
     path: "row-of-hardcover-books.jpg",

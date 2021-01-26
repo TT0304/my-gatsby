@@ -1,6 +1,6 @@
 ---
 title: "How to Serve Gatsby Blog Posts at a Subdirectory"
-date: "2020-04-09"
+date: 2020-04-09
 category: "web development"
 featuredImage:
   {

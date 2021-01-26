@@ -1,6 +1,6 @@
 ---
 title: "How to Fetch Content from Wordpress to Gatsby"
-date: "2020-04-07"
+date: 2020-04-07
 featuredImage: {path: "dog-fetching-frisbee.jpg",
 credit: '<span>Photo by <a href="https://unsplash.com/@fightmorefilms?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Anthony Duran</a> on <a href="https://unsplash.com/s/photos/fetch?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>'}
 category: "web development"

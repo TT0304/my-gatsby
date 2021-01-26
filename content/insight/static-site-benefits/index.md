@@ -1,6 +1,6 @@
 ---
 title: "What's the deal with static site"
-date: "2020-12-11"
+date: 2020-12-11
 description: "The simplest explanation for static sites, and whether you need them for to power your next dream app."
 featuredImage:
   {

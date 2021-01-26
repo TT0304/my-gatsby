@@ -1,6 +1,6 @@
 ---
 title: "How to Render Blog Posts from Multiple Sources in Gatsby"
-date: "2020-04-10"
+date: 2020-04-10
 featuredImage:
   {
     path: "drawer.jpg",

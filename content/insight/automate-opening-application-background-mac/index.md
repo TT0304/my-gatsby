@@ -1,6 +1,6 @@
 ---
 title: "How to Automate Opening Applications in the Background on Mac"
-date: "2020-10-24"
+date: 2020-10-24
 category: "productivity"
 featuredImage:
   {
