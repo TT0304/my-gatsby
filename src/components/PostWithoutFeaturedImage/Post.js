@@ -43,7 +43,7 @@ export default function Post({ post }) {
       </div>
       <section className={`mx-auto ${styles["post-content"]}`}>
         <aside
-          className={`sidebar ${styles["post-sidebar__left"]} type__ancillary}`}
+          className={`sidebar ${styles["post-sidebar__left"]} type__ancillary`}
         >
           <div class="reading-time sidebar__section">
             <h4 class="sidebar-section__title">Reading time</h4>
