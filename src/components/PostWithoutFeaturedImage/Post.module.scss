@@ -1,0 +1,25 @@
+@include var.media(">medWidth") {
+  .post-content {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: auto;
+    grid-column-gap: 20px;
+  }
+}
+@include var.media(">lgWidth") {
+  .post-content {
+    max-width: var(--width-base);
+    grid-template-areas: "sidebar-l sidebar-l content content content content content content content content sidebar-r sidebar-r";
+  }
+}
+.post-sidebar {
+  &__left {
+    grid-area: sidebar-l;
+  }
+  &__right {
+    grid-area: sidebar-r;
+  }
+}
+.post-body {
+  grid-area: content;
+}

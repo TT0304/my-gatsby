@@ -1,1 +1,1 @@
-export { default } from "./PostWithoutFeaturedImage"
+export { default } from "./Post"
