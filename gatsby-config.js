@@ -28,6 +28,9 @@ module.exports = {
       options: {
         implementation: require("sass"),
         data: `@use "src/styles/variables" as var;`,
+        cssLoaderOptions: {
+          camelCase: false,
+        },
       },
     },
     "gatsby-plugin-react-helmet",
