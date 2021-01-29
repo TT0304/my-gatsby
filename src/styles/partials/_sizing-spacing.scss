@@ -1,0 +1,72 @@
+@use './functions' as f;
+
+$scales: 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2, 3, 4, 6, 8, 12, 16, 24, 32, 40, 48;
+:root {
+  --size--base: 16px;
+  --space-xxs: calc(var(--size--base) * 0.25);
+  --space-xs: calc(var(--size--base) * 0.5);
+  --space-sm: calc(var(--size--base) * 0.75);
+  --space-base: var(--size--base);
+  --space-md: calc(var(--size--base) * 1.5);
+  --space-lg: calc(var(--size--base) * 2);
+  --space-xl: calc(var(--size--base) * 3);
+  --text-xs: calc(var(--size--base) * 0.75);
+  --text-sm: calc(var(--size--base) * 0.875);
+  --text-base: calc(var(--size--base) * 1);
+  --text-md: calc(var(--size--base) * 1.25);
+  --text-lg: calc(var(--size--base) * 1.5);
+  --text-xl: calc(var(--size--base) * 1.75);
+  --text-xxl: calc(var(--size--base) * 2);
+  --text-xxl: calc(var(--size--base) * 3);
+  @include f.media(">lgWidth") {
+    --text-xs: calc(var(--size--base) * 0.75);
+    --text-sm: var(--size--base);
+    --text-base: calc(var(--size--base) * 1.25);
+    --text-md: calc(var(--size--base) * 1.5);
+    --text-lg: calc(var(--size--base) * 1.75);
+    --text-xl: calc(var(--size--base) * 2);
+    --text-xxl: calc(var(--size--base) * 2.25);
+  }
+  @include f.media(">xlWidth") {
+    --text-base: calc(var(--size--base) * 1.25);
+    --text-md: calc(var(--size--base) * 1.5);
+    --text-lg: calc(var(--size--base) * 2);
+    --text-xl: calc(var(--size--base) * 2.5);
+    --text-xxl: calc(var(--size--base) * 3);
+    --text-xxxl: calc(var(--size--base) * 4);
+  }
+}
+.mb-base {
+  margin-bottom: var(--space--base);
+}
+.mb-xs {
+  margin-bottom: var(--space-xs);
+}
+.mb-lg {
+  margin-bottom: var(--space-lg);
+}
+.mb-xl {
+  margin-bottom: var(--space-xl);
+}
+.mt-base {
+  margin-top: var(--space-base);
+}
+.mt-md {
+  margin-top: var(--space-md);
+}
+.pt-base {
+  padding-top: var(--space-base);
+}
+.pt-sm {
+  padding-top: var(--space-sm);
+}
+.pt-md {
+  padding-top: var(--space-md);
+}
+.pb-lg {
+  padding-bottom: var(--space-lg);
+}
+.py-sm {
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}

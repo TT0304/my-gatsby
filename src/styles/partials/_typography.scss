@@ -1,0 +1,14 @@
+@use './functions' as f;
+
+:root {
+  --font-platform: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  --font-sans-serif: "Raleway", var(--font-platform);
+  --font-body: var(--font-sans-serif);
+  --font-mono: "Inconsolata", monospace;
+  --font-ancillary: var(--font-mono);
+}
+.font-ancillary {
+  font-family: var(--font-ancillary);
+}

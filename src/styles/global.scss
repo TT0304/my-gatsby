@@ -1,14 +1,15 @@
 @use 'partials/normalize';
+@use 'partials/typography';
+@use 'partials/colors';
+@use 'partials/layout';
+@use 'partials/sizing-spacing';
 @use 'partials/grids';
+@use 'partials/lineheight';
+@use 'partials/borders';
 
 /* Define CSS varialbes */
 :root {
-  --color-black: black;
   --color-honeydew: #faf9f9;
-  --font-platform: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  --font-sans-serif: "Raleway", var(--font-platform);
   --lighten5: hsla(0, 0%, 100%, 0.05);
   --lighten10: hsla(0, 0%, 100%, 0.1);
   --lighten25: hsla(0, 0%, 100%, 0.25);
@@ -27,6 +28,7 @@
   --space6: 6rem;
   --space8: 8rem;
   --width-base: 1180px;
+  --width-md-10-col: 980px;
   --width1: 8.33333%;
   --width2: 16.66667%;
   --width3: 25%;
@@ -60,11 +62,11 @@
 
 html,
 body {
-  font-family: var(--font-sans-serif);
-  font-size: 16px;
+  font-family: var(--font-body);
+  font-size: var(--text-base);
   font-weight: normal;
   color: var(--color-black);
-  background: var(--color-honeydew);
+  line-height: var(--line-height-base);
 }
 body,
 body * {
@@ -1204,10 +1206,6 @@ a.hover:before {
   }
 }
 @include var.media(">xlWidth") {
-  html,
-  body {
-    font-size: 20px;
-  }
   .xl-col-1 {
     width: var.$width1;
   }
@@ -1311,4 +1309,11 @@ a.hover:before {
   .xl-p2 {
     padding: var(--space2);
   }
+}
+.post p {
+  margin-bottom: 1em;
+}
+.post h2 {
+  font-size: var(--text-xl);
+  margin-bottom: 0.5em;
 }

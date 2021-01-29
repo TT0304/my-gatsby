@@ -1,0 +1,40 @@
+:root {
+  --line-height-xxs: 1;
+  --line-height-xs: 1.125;
+  --line-height-sm: 1.25;
+  --line-height-md: 1.5;
+  --line-height-lg: 1.75;
+  --line-height-xl: 2;
+  --line-height-xxl: 2.25;
+  --line-height-base: var(--line-height-md);
+}
+.line-height-xxs {
+  line-height: var(--line-height-xxs);
+}
+.line-height-xs {
+  line-height: var(--line-height-xs);
+}
+.line-height-sm {
+  line-height: var(--line-height-sm);
+}
+.line-height-md {
+  line-height: var(--line-height-md);
+}
+.line-height-lg {
+  line-height: var(--line-height-lg);
+}
+.line-height-xl {
+  line-height: var(--line-height-xl);
+}
+.line-height-xxl {
+  line-height: var(--line-height-xl);
+}
+.line-height-base {
+  line-height: var(--line-height-lg);
+}
+.line-height-body {
+  line-height: var(--line-height-md);
+}
+.line-height-heading {
+  line-height: var(--line-height-xs);
+}

@@ -7,3 +7,43 @@
 @function strip-unit($number) {
   @return $number / ($number * 0 + 1);
 }
+/* Store breakpoints */
+$mediaXL: 1200px;
+$mediaLarge: 992px;
+$mediaMedium: 768px;
+$mediaSmall: 576px;
+$mediaExtraSmall: 480px;
+
+@function translate-media-condition($c) {
+  $condMap: (
+    "screen": "only screen",
+    "print": "only print",
+    "retina":
+      "(-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5), (min-resolution: 120dpi)",
+    ">xlWidth": "(min-width: #{$mediaXL + 1})",
+    "<xlWidth": "(max-width: #{$mediaXL})",
+    ">lgWidth": "(min-width: #{$mediaLarge + 1})",
+    "<lgWidth": "(max-width: #{$mediaLarge})",
+    ">mdWidth": "(min-width: #{$mediaMedium + 1})",
+    "<mdWidth": "(max-width: #{$mediaMedium})",
+    ">smWidth": "(min-width: #{$mediaSmall + 1})",
+    "<smWidth": "(max-width: #{$mediaSmall})",
+    ">xsWidth": "(min-width: #{$mediaExtraSmall + 1})",
+    "<xsWidth": "(max-width: #{$mediaExtraSmall}",
+  );
+  @return map-get($condMap, $c);
+}
+// The media mixin
+@mixin media($args...) {
+  $query: "";
+  @each $arg in $args {
+    $op: "";
+    @if ($query != "") {
+      $op: " and ";
+    }
+    $query: $query + $op + translate-media-condition($arg);
+  }
+  @media #{$query} {
+    @content;
+  }
+}

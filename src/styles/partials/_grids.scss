@@ -1,0 +1,60 @@
+@use './functions' as f;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  @include f.media(">mdWidth") {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  @include f.media(">xlWidth") {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+.grid-col-start-1 {
+  grid-column-start: 1;
+}
+.grid-col-span-4 {
+  grid-column-end: span 4;
+}
+.grid-col-start-8 {
+  grid-column-start: 8;
+}
+.grid-col-span-5 {
+  grid-column-end: 5;
+}
+@include f.media(">smWidth") {
+  .grid-col-start-1--sm {
+    grid-column-start: 1;
+  }
+  .grid-col-span-8--sm {
+    grid-column-end: span 8;
+  }
+}
+@include f.media(">mdWidth") {
+  .grid-col-start-1--md {
+    grid-column-start: 1;
+  }
+  .grid-col-start-6--md {
+    grid-column-start: 6;
+  }
+  .grid-col-span-3--md {
+    grid-column-end: span 3;
+  }
+  .grid-col-span-4--md {
+    grid-column-end: span 4;
+  }
+}
+@include f.media(">xlWidth") {
+  .grid-col-start-1--xl {
+    grid-column-start: 1;
+  }
+  .grid-col-start-8--xl {
+    grid-column-start: 8;
+  }
+  .grid-col-span-5--xl {
+    grid-column-end: span 5;
+  }
+  .grid-col-span-6--xl {
+    grid-column-end: span 6;
+  }
+}

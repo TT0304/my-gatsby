@@ -1,0 +1,7 @@
+:root {
+  --border-width-xs: 1px;
+  --border-width-sm: 2px;
+  --border-width-md: 3px;
+  --border-width-lg: 4px;
+  --divider: var(--border-width-sm) dotted var(--color-black);
+}
