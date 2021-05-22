@@ -27,6 +27,7 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         implementation: require("sass"),
+        // globally expose the content of the variables module to each Sass file in the project
         data: `@use "src/styles/variables" as var;`,
         cssLoaderOptions: {
           camelCase: false,
