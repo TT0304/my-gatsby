@@ -54,7 +54,7 @@
     }
   }
   &__title {
-    margin: 15px 0 0;
+    margin-bottom: var(--space1);
     letter-spacing: -2px;
     font-size: 60px;
     @include var.media("screen", ">xlWidth") {
