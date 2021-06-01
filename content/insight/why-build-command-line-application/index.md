@@ -71,3 +71,7 @@ I don't know why I get this idea, but I used to think that a CLI is synonymous w
 That's not true. A CLi can be built with Node.js, Ruby, Python, Rust and so many other languages.
 
 You write your program in any of those languages, then turn it into an executable command that can be run from anywhere in the filesystem. How you do that is dependent on the language, but from my experience it's the easiest part of building a CLI.
+
+This means all that is left to you is to go build a CLI now.
+
+If you don't have any idea, how about a tool that lets you post to [dev.to](https://dev.to), [Medium](https://medium.com) or any of your favorite blogging platforms from the comfort of the command line, without ever opening the browser? Context switching for the win.
